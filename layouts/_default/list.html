@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
-
-<head>
-  <meta charset="UTF-8">
-  <title>{{ .Page.Title }} - {{ .Site.Title }}</title>
-</head>
-
-<body>
+{{ define "main" }}
   {{ .Page.Content }}
-
   <hr />
-
-  <h3>セクションに含まれる記事ページの一覧</h3>
+  <h3>セクション記事一覧</h3>
   <ul>
     {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
-
-</body>
-
-</html>
+{{ end }}
