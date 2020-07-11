@@ -1,0 +1,33 @@
+baseURL = ""
+themesdir = "../.."
+theme = "mdhelp"
+title = "Hugo mdhelp Theme"
+languageCode = "ja-jp"
+DefaultContentLanguage = "jp"
+enableInlineShortcodes = true
+disablePathToLower= true
+enableGitInfo = false
+defaultContentLanguageInSubdir= true
+hasCJKLanguage = true
+uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
+
+[languages]
+  [languages.jp]
+    baseURL = "."
+    title = "ヘルプ"
+    languageName = "Japanese"
+    contentDir = "content/jp"
+    weight = 1
+    dateFormat = "2006年01月02日"
+  [languages.en]
+    baseURL = "."
+    title = "Help"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+    dateFormat = "Jan. 2, 2006"
+
+# goldmark settings
+[markup.goldmark.renderer]
+  hardWraps = true # Markdownのテキストの改行をbrタグにする機能
+  unsafe = true # Markdown内のhtmlの有効/無効

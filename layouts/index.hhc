@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+{{- define "hhc_hierarchy" }}
+  <UL>
+  {{- range .Pages }}
+    <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="{{.Title}}">
+    {{- if .IsPage}}
+    <param name="Local" value="{{.RelPermalink}}">{{ end }}
+		</OBJECT>
+    {{- if .IsSection }}{{ template "hhc_hierarchy" . }}{{ end }}
+  {{- end }}
+  </UL>
+{{- end }}
+{{ template "hhc_hierarchy" .Site.Home }}
+</BODY></HTML>

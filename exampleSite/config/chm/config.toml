@@ -1,0 +1,26 @@
+# content以下の無視するセクション/記事。ヘルプのエディションにより不要になるセクションや記事がある場合に使用。
+#ignoreFiles = ["ignore"]
+
+# html以外のファイル類はすべて生成を抑制する
+disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT", "sitemap", "section"]
+
+[outputs]
+  home = [ "HTML", "HHC", "HHP"] # hhc/hhpも生成
+
+# カスタムメディアタイプを指定
+# index.hhc -> toc.hhcを生成
+# index.hhp -> project.hhpを生成
+[mediaTypes]
+  [mediaTypes."text/hhc"]
+    suffixes = ["hhc"]
+  [mediaTypes."text/hhp"]
+    suffixes = ["hhp"]
+[outputFormats]
+  [outputFormats.HHC]
+    baseName = "toc"
+    isPlainText = true
+    mediaType = "text/hhc"
+  [outputFormats.HHP]
+    baseName = "project"
+    isPlainText = true
+    mediaType = "text/hhp"

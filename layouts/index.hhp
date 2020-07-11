@@ -1,0 +1,32 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Lesson.chm
+Contents file=toc.hhc
+Default Window=DefaultWindowSettings
+Default topic=content\test.html
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x411 “ú–{Œê (“ú–{)
+
+[WINDOWS]
+DefaultWindowSettings="Lesson ƒwƒ‹ƒv","toc.hhc","Index.hhk","content\test.html","content\test.html",,,,,0x2520,,0x304e,[500,500,800,600],,,,,,,0
+
+
+[FILES]
+{{- define "hierarchy" }}
+{{- range .Pages }}
+{{- if .IsPage}}
+{{.RelPermalink}}{{ end }}
+{{- if .IsSection }}{{ template "hierarchy" . }}{{ end }}
+{{- end }}{{- end }}{{ template "hierarchy" .Site.Home }}
+
+
+[ALIAS]
+#include Alias.h
+
+[MAP]
+#include Map.h
+
+[INFOTYPES]
+

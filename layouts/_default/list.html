@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Page.Title }} - {{ .Site.Title }}</title>
+</head>
+
+<body>
+  {{ .Page.Content }}
+
+  <hr />
+
+  <h3>セクションに含まれる記事ページの一覧</h3>
+  <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </ul>
+
+</body>
+
+</html>
