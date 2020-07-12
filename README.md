@@ -24,8 +24,9 @@ cd mdhelp
 ```
 
 以下が成果物です。
-`.\exampleSite\public_chm\jp\mdhelp.chm`
-`.\exampleSite\public_chm_other_version\jp\mdhelp.chm`
+
+* `.\exampleSite\public_chm\jp\mdhelp.chm`
+* `.\exampleSite\public_chm_other_version\jp\mdhelp.chm`
 
 ## 制約
 
