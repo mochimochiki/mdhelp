@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="{{ .Site.Params.Author }}" />
+    <link rel="shortcut icon" href="/img/favicon.ico">
     <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <!-- css -->
+    {{- $css := resources.Get "css/style.css" -}}
+    {{- $style := $css | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
+    <!-- custom css -->
+    {{- range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . }}">
+    {{- end -}}
   </head>
   <body>
     {{- partial "header.html" . -}}
