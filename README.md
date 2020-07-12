@@ -7,7 +7,7 @@ mdhelpはHTML Help(.chm)のヘルプを生成することを目的とした[HUGO
 ### 前提条件
 
 1. [HUGO](https://gohugo.io/)をダウンロード・インストールし、`hugo.exe`にPATHを通しておきます。
-1. [Microsoftのページ](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads)から`Htmlhelp.exe`をダウンロード・インストールし、`hhc.exe`にPATHを通しておきます。
+1. [Microsoft HTML Help Downloads](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads)から`Htmlhelp.exe`をダウンロード・インストールし、`hhc.exe`にPATHを通しておきます。
 
 ### Clone
 
