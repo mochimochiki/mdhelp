@@ -5,8 +5,9 @@ Contents file=toc.hhc
 Default Window=WindowSettings
 Default topic=index.html
 Display compile progress=No
+Error log file=Compile.Log
 Full-text search=Yes
-Language=0x411
+Language=0x411 Japanese
 
 [WINDOWS]
 WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[145,22,1627,1149],,,,,,,0
