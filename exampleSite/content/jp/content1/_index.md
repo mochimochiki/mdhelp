@@ -1,7 +1,7 @@
 ---
 title: "content1_index"
 chapter: true
-weight: 10
+weight: 1
 ---
 
 # テスト

@@ -6,7 +6,7 @@
 </HEAD><BODY>
 {{- define "hhc_hierarchy" }}
   <UL>
-  {{- range .Pages }}
+  {{- range .Pages.ByWeight }}
     <LI> <OBJECT type="text/sitemap">
     <param name="Name" value="{{.Title}}">
     {{- if .IsPage}}

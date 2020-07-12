@@ -1,6 +1,6 @@
 ---
 title: content1_page2
-weight: 10
+weight: 30
 ---
 ## Test
 
