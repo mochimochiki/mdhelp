@@ -1,0 +1,22 @@
+body{
+    font-family: 'メイリオ', Meiryo, '游ゴシック Medium', '游ゴシック体', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    /* font-size: 1rem !important; */
+    color: #323232 !important;
+}
+
+/* 表のテーマ */
+table{
+    border-collapse:collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+td,th{
+    font-size: 0.8rem;
+    padding:0.4rem;
+}
+th{
+    background:#ccc;
+}
+table tr:nth-child(even){
+    background:#eee;
+}

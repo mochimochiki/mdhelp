@@ -1,0 +1,8 @@
+<div class="footer">
+  <p>
+    &copy; {{ .Site.Params.CopyRightYear }} {{ .Site.Params.Author }}.
+  </p>
+</div>
+{{- range .Site.Params.custom_js -}}
+<script src="{{ . }}"></script>
+{{ end }}
