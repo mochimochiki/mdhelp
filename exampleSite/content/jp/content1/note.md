@@ -24,7 +24,7 @@ weight: 10
 
 toc.hhcは目次を生成するために必要。
 
-<pre>
+```
 [mediaTypes]
   [mediaTypes."text/hhc"]
     suffixes = ["hhc"]
@@ -33,7 +33,7 @@ toc.hhcは目次を生成するために必要。
     baseName = "toc"
     isPlainText = true
     mediaType = "text/hhc"
-</pre>
+```
 
 のようにしておき、layoutsにindex.hhcを入れておくことでtoc.hhcのように任意の形式のファイルが生成可能。
 "参考":https://qiita.com/httpd443/items/1bd19ad4f7b96876b27f
