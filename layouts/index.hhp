@@ -1,16 +1,15 @@
 [OPTIONS]
 Compatibility=1.1 or later
-Compiled file=Lesson.chm
+Compiled file=mdhelp.chm
 Contents file=toc.hhc
 Default Window=DefaultWindowSettings
-Default topic=content\test.html
+Default topic=index.html
 Display compile progress=No
 Full-text search=Yes
-Index file=Index.hhk
 Language=0x411 “ú–{Œê (“ú–{)
 
 [WINDOWS]
-DefaultWindowSettings="Lesson ƒwƒ‹ƒv","toc.hhc","Index.hhk","content\test.html","content\test.html",,,,,0x2520,,0x304e,[500,500,800,600],,,,,,,0
+DefaultWindowSettings="mdhelpTitle","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[145,22,1627,1149],,,,,,,0
 
 
 [FILES]
