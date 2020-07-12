@@ -14,7 +14,7 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
 [languages]
   [languages.jp]
     baseURL = "."
-    title = "ヘルプ"
+    title = "mdhelp"
     languageName = "Japanese"
     contentDir = "content/jp"
     weight = 1

@@ -1,15 +1,15 @@
 [OPTIONS]
 Compatibility=1.1 or later
-Compiled file=mdhelp.chm
+Compiled file={{ .Site.Title }}.chm
 Contents file=toc.hhc
-Default Window=DefaultWindowSettings
+Default Window=WindowSettings
 Default topic=index.html
 Display compile progress=No
 Full-text search=Yes
-Language=0x411 “ú–{Œê (“ú–{)
+Language=0x411
 
 [WINDOWS]
-DefaultWindowSettings="mdhelpTitle","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[145,22,1627,1149],,,,,,,0
+WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[145,22,1627,1149],,,,,,,0
 
 
 [FILES]
