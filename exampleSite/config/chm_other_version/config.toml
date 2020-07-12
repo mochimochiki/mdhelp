@@ -1,8 +1,8 @@
 # publish dir
-publishDir = "public_chm"
+publishDir = "public_chm_other_version"
 
 # content以下の無視するセクション/記事。ヘルプのエディションにより不要になるセクションや記事がある場合に使用。
-#ignoreFiles = ["ignore"]
+ignoreFiles = ["ignore"]
 
 # html以外のファイル類はすべて生成を抑制する
 disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT", "sitemap"]

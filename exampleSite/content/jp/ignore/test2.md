@@ -1,5 +1,5 @@
 ---
-title: content1_page2
+title: ignore_test2
 weight: 10
 ---
 ## Test
