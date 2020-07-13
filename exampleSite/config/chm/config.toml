@@ -27,3 +27,11 @@ disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT
     baseName = "project"
     isPlainText = true
     mediaType = "text/hhp"
+
+[languages]
+  [languages.jp]
+    [languages.jp.params]
+      helpLanguageCode = "0x411 Japanese"
+  [languages.en]
+    [languages.en.params]
+      helpLanguageCode = "0x409 English (US)"
