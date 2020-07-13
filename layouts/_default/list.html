@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ .Page.Content }}
   <hr />
-  <h3>セクション記事一覧</h3>
+  <h3>Sections</h3>
   <ul>
     {{ range .Pages }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
