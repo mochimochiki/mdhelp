@@ -41,3 +41,28 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
 [markup.goldmark.renderer]
   hardWraps = true # Markdownのテキストの改行をbrタグにする機能
   unsafe = true # Markdown内のhtmlの有効/無効
+
+# カスタムメディアタイプを指定
+# index.hhc -> toc.hhcを生成
+# index.hhp -> project.hhpを生成
+# index.h   -> Map.hを生成
+[mediaTypes]
+  [mediaTypes."text/hhc"]
+    suffixes = ["hhc"]
+  [mediaTypes."text/hhp"]
+    suffixes = ["hhp"]
+  [mediaTypes."text/map"]
+    suffixes = ["h"]
+[outputFormats]
+  [outputFormats.HHC]
+    baseName = "toc"
+    isPlainText = true
+    mediaType = "text/hhc"
+  [outputFormats.HHP]
+    baseName = "project"
+    isPlainText = true
+    mediaType = "text/hhp"
+  [outputFormats.MAPTEMP]
+    baseName = "MapTemplate"
+    isPlainText = true
+    mediaType = "text/map"

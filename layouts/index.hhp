@@ -23,7 +23,19 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
 
 
 [ALIAS]
-#include Alias.h
+{{- define "create_alias" }}
+{{- range .Pages -}}
+{{- if .IsPage }}
+{{- $id := replace .RelPermalink "/" "_" }}
+{{- $id = replace $id ".html" "" | upper }}
+IDH_{{ $id }}={{.RelPermalink}}
+{{- end -}}
+{{- if .IsSection -}}
+{{ template "create_alias" . }}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+{{ template "create_alias" .Site.Home }}
 
 [MAP]
 #include Map.h
