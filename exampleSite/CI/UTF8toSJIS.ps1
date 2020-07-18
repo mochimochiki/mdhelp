@@ -1,14 +1,15 @@
 using namespace UTF8toSJISConverter;
 
 param(
-  [String]$dir = "public"
+  [String]$dir = "public",
+  [String]$logname = "UTF8toSJIS_Unknown.log"
 )
 
 $scriptPath = $MyInvocation.MyCommand.Path
 $scriptDir = Split-Path -Parent $scriptPath
 Add-Type -Path "$($scriptDir)\UTF8toSJISConverter.cs"
 $logDir = $scriptDir
-$logPath = Join-Path $logDir "UTF8toSJIS_UnknonwChars.log"
+$logPath = Join-Path $logDir $logname
 if (Test-Path $logPath) {
   Remove-Item $logPath
 }
@@ -29,10 +30,13 @@ Get-ChildItem $dir -recurse -include *.hhp, *.html, *.hhc | ForEach-Object {
   if ($_.GetType().Name -eq "FileInfo") {
     $inputPath = $_.FullName
     try {
-      Write-Output "convert: $($inputPath)"
       $notExistUnknonw = [UTF8toSJISConverter]::Convert($inputPath, $inputPath, $logPath)
       if (!$notExistUnknonw) {
         $unknonwFileNum++
+        Write-Output "convert: $($inputPath) --unknwon char is detected!!"
+      }
+      else {
+        Write-Output "convert: $($inputPath)"
       }
       $fileNum++
     }
