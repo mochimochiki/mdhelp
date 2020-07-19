@@ -6,6 +6,21 @@ body{
     color: #323232 !important;
 }
 
+/* Menu */
+.menu {
+  background-color: #eeeeee;
+  padding-bottom: 1rem;
+}
+.menu-selected {
+  background-color: lightcoral;
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
+}
+
 /* 表のテーマ */
 table{
     border-collapse:collapse;
