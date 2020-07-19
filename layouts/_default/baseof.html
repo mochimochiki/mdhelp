@@ -16,6 +16,7 @@
     {{- end -}}
   </head>
   <body>
+    {{- if .Site.Params.showMenu }} {{- partial "menu.html" . -}} {{- end }}
     {{- partial "header.html" . -}}
     <div id="content">
     {{- block "main" . }}{{- end }}
