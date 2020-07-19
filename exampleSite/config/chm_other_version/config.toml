@@ -2,10 +2,14 @@
 publishDir = "public_chm_other_version"
 
 # content以下の無視するセクション/記事。ヘルプのエディションにより不要になるセクションや記事がある場合に使用。
-ignoreFiles = ["ignore"]
+ignoreFiles = ["ignore", "content1/child/test"]
 
 # html以外のファイル類はすべて生成を抑制する
 disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT", "sitemap"]
+
+[params]
+  # ShowIfショートコードで表示するコンテンツの一覧
+  #showIfs = ["supportFuncA"]
 
 [outputs]
   home = [ "HTML", "HHC", "HHP", "MAPTEMP"] # hhc/hhp/maptemplateも生成
