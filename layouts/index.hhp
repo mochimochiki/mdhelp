@@ -10,7 +10,7 @@ Full-text search=Yes
 Language={{ .Site.Params.helpLanguageCode }}
 
 [WINDOWS]
-WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[145,22,1627,1149],,,,,,,0
+WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[300,300,1627,1149],,,,,,,0
 
 
 [FILES]
