@@ -25,6 +25,7 @@ weight: 10
 toc.hhcは目次を生成するために必要。
 
 ```
+あああ
 [mediaTypes]
   [mediaTypes."text/hhc"]
     suffixes = ["hhc"]
@@ -35,11 +36,9 @@ toc.hhcは目次を生成するために必要。
     mediaType = "text/hhc"
 ```
 
-のようにしておき、layoutsにindex.hhcを入れておくことでtoc.hhcのように任意の形式のファイルが生成可能。
-"参考":https://qiita.com/httpd443/items/1bd19ad4f7b96876b27f
+のようにしておき、layoutsにindex.hhcを入れておくことでtoc.hhcのように任意の形式のファイルが生成可能。[参考](https://qiita.com/httpd443/items/1bd19ad4f7b96876b27f)
 
 * index.hhcは"ここ":https://maku77.github.io/hugo/list/page-hierarchy.html を参考に実装
-
 * /jp,/en それぞれでサイトを生成し、baseURLを"."にしておくことでtoc.hhcのリンクを自動生成できた。
 * baseURLを入れないと"/"が最初に入ってしまい、これを消す手段を考えなくてはならなかった。
 * 別の手段としてはtoc.hhc生成後に"/"を別途消す方法も考えられるが、HUGOでできたので良しとする。
