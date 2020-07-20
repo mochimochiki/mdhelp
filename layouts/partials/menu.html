@@ -6,7 +6,7 @@
   {{- $section := .section }}
   {{- $current := .current }}
   <ul>
-    {{- range $section.Sections }}
+    {{- range $section.Sections.ByWeight }}
     <li><a href="{{ .RelPermalink }}" class="{{ if (eq . $current) }}menu-selected{{ end }}">{{ .Title }}</a>
       {{- if .IsAncestor $current }}
       {{- template "menu-tree" (dict "section" . "current" $current) }}{{- end }}{{- end }}
