@@ -1,48 +1,46 @@
 @echo off
-pushd %~dp0..
+set scriptdir=%~dp0
+set hugodir=%~dp0..
+pushd %hugodir%
+
+if "%1" == "" (
+  echo "arg1:environment was not specified. Build with default environment (chm) ..."
+  set hugo_env=chm
+) else (
+  set hugo_env=%1
+)
+
+:: environment exist check
+if not exist .\config\%hugo_env% (
+  echo "%hugo_env% does not exist in config directory."
+  exit /B 1
+)
 
 :: -----------------------
-:: Normal Edition
+:: HUGO Build
 :: -----------------------
-echo Build Normal edition...
-hugo --environment chm
+echo Build %hugo_env% environment...
+hugo --environment %hugo_env%
 if not %errorlevel% == 0 exit /B 1
 
 :: ----------
 :: JP Help
 :: ----------
 :: convert to sjis
-powershell -NoProfile -ExecutionPolicy RemoteSigned ".\CI\UTF8toSJIS.ps1 -dir public_chm\jp -logname unknown_chm.log;exit $LASTEXITCODE"
+pushd %scriptdir%
+powershell -NoProfile -ExecutionPolicy RemoteSigned ^
+  ".\UTF8toSJIS.ps1 -dir \"%hugodir%\public_%hugo_env%\jp\" -logname unknown_%hugo_env%.log;exit $LASTEXITCODE"
 if not %errorlevel% == 0 exit /B 1
-hhc.exe public_chm\jp\project.hhp
+popd
+
+hhc.exe public_%hugo_env%\jp\project.hhp
 :: hhc.exe returns 1 on success  https://ja.coder.work/so/cmd/1267049
 if not %errorlevel% == 1 exit /B 1
 
 :: ----------
 :: EN Help
 :: ----------
-hhc.exe public_chm\en\project.hhp
-if not %errorlevel% == 1 exit /B 1
-
-:: -----------------------
-:: Other Edition
-:: -----------------------
-echo Build some directory ignored edition...
-hugo --environment chm_other_version
-if not %errorlevel% == 0 exit /B 1
-
-:: ----------
-:: JP Help
-:: ----------
-powershell -NoProfile -ExecutionPolicy RemoteSigned ".\CI\UTF8toSJIS.ps1 -dir public_chm_other_version\jp -logname unknown_other.log;exit $LASTEXITCODE"
-if not %errorlevel% == 0 exit /B 1
-hhc.exe public_chm_other_version\jp\project.hhp
-if not %errorlevel% == 1 exit /B 1
-
-:: ----------
-:: EN Help
-:: ----------
-hhc.exe public_chm_other_version\en\project.hhp
+hhc.exe public_%hugo_env%\en\project.hhp
 if not %errorlevel% == 1 exit /B 1
 
 popd

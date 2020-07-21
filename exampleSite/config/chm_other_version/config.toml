@@ -1,4 +1,4 @@
-# publish dir
+# publish dir "public_(environment)"という名称にします。
 publishDir = "public_chm_other_version"
 
 # content以下の無視するセクション/記事。ヘルプのエディションにより不要になるセクションや記事がある場合に使用。
