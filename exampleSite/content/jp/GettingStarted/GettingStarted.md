@@ -60,7 +60,7 @@ themesdir = "../.."
   ...
 ```
 
-その他のconfigパラメータについては[ヘルプの構成](../Configuration/ConfigureHelp.html)および[HUGO公式ドキュメント](https://gohugo.io/getting-started/configuration/)などを参照してください。
+その他のconfigパラメータについては[ヘルプの構成](../Configuration/10_ConfigureHelp.html)および[HUGO公式ドキュメント](https://gohugo.io/getting-started/configuration/)などを参照してください。
 
 ### トップページの作成
 
