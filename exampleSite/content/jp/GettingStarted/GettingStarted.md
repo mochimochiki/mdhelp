@@ -60,7 +60,7 @@ themesdir = "../.."
   ...
 ```
 
-その他のconfigパラメータについては[HUGO公式ドキュメント](https://gohugo.io/getting-started/configuration/)などを参照してください。
+その他のconfigパラメータについては[ヘルプの構成](../Configuration/ConfigureHelp.html)および[HUGO公式ドキュメント](https://gohugo.io/getting-started/configuration/)などを参照してください。
 
 ### トップページの作成
 
@@ -173,7 +173,7 @@ hugo server
 `Ctrl+C` でhugoのプレビューを終了し、以下のコマンドを実行してヘルプをビルドします。
 
 ```
-.\CI\build.bat
+.\CI\build.bat chm
 ```
 
 * `myhelp\public_chm\jp\MyHelp.chm`
