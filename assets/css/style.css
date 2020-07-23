@@ -10,9 +10,13 @@ html {
 
 /* content */
 body {
-  width: 70%;
+  width: 60%;
+  min-width: 400pt;
   margin-left: auto;
   margin-right: auto;
+}
+#content {
+  margin-bottom: 50pt;
 }
 p {
   margin-top: 2pt;
@@ -61,11 +65,13 @@ pre {
   font-family: monospace;
   line-height: 120%;
   font-size: 100%;
+  white-space: pre-wrap;
 }
 code { /* inline code */
   padding: 2pt;
   background-color: #eee;
   font-size: 100%;
+  white-space: pre-wrap;
 }
 pre code {
   padding: 0pt;
