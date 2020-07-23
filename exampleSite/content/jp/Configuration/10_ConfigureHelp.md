@@ -5,7 +5,7 @@ weight: 10
 
 ## Configuration
 
-ヘルプを構成するための主な設定値の説明をします。
+ヘルプを構成するための`config.toml`の主な項目の説明をします。[HUGO公式ドキュメント](https://gohugo.io/getting-started/configuration/)も合わせて参照してください。
 
 #### publishDir
 
