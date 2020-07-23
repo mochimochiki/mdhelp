@@ -1,5 +1,5 @@
 ---
-title: "Configuration"
+title: "ヘルプの構成"
 chapter: true
 weight: 20
 ---

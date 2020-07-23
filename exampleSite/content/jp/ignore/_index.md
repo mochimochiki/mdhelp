@@ -1,5 +1,5 @@
 ---
-title: "ignore_index"
+title: "ignore"
 chapter: true
 weight: 30
 ---
