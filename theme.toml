@@ -4,7 +4,7 @@
 name = "Mdhelp"
 license = "Apache-2.0"
 licenselink = "https://github.com/mochimochiki/mdhelp/blob/master/LICENSE"
-description = ""
+description = "HUGO theme for creating HTML Help (.chm)."
 homepage = "http://example.com/"
 tags = []
 features = []
