@@ -1,6 +1,6 @@
 ---
 title: Markdown Showcase
-weight: 30
+weight: 10
 ---
 
 ## Markdown 見出し2

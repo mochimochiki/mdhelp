@@ -1,9 +1,7 @@
 ---
-title: "Top"
+title: "MDHELP"
 ---
 
-# helptest
+# MDHELP
 
-## About
-
-helpのテストです。
+MDHELP は HTML Help (.chm) のヘルプを生成することを目的としたHUGOのテーマです。

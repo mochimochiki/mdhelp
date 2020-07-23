@@ -1,9 +1,9 @@
 ---
-title: "ignore_index"
+title: "ignore"
 chapter: true
-weight: 10
+weight: 30
 ---
 
-# テスト
+# ignore
 
-このページはテストです。
+このチャプターはエディションによって無視されます。

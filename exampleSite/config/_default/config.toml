@@ -1,7 +1,6 @@
 baseURL = ""
 themesdir = "../.."
 theme = "mdhelp"
-title = "Hugo mdhelp Theme"
 languageCode = "ja-jp"
 DefaultContentLanguage = "jp"
 enableInlineShortcodes = true
