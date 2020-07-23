@@ -9,7 +9,7 @@
   {{- range .Pages.ByWeight }}
     <LI> <OBJECT type="text/sitemap">
     <param name="Name" value="{{.Title}}">
-    {{- if .IsPage}}
+    {{- if ne .Params.HideHelpTOC true }}
     <param name="Local" value="{{.RelPermalink}}">{{ end }}
 		</OBJECT>
     {{- if .IsSection }}{{ template "hhc_hierarchy" . }}{{ end }}

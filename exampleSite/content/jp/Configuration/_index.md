@@ -1,6 +1,7 @@
 ---
 title: "ヘルプの構成"
 chapter: true
+hideHelpTOC: true
 weight: 20
 ---
 
