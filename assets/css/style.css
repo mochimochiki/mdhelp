@@ -31,22 +31,22 @@ h2 {
   border-bottom: 1px solid #ccc;
 }
 h3 {
-  margin-top: 25pt;
+  margin-top: 30pt;
   margin-bottom: 5pt;
   font-size: 150%;
 }
 h4 {
-  margin-top: 20pt;
+  margin-top: 25pt;
   margin-bottom: 5pt;
   font-size: 120%;
 }
 h5 {
-  margin-top: 15pt;
+  margin-top: 20pt;
   margin-bottom: 2pt;
   font-size: 110%;
 }
 h6 {
-    margin-top: 1pt;
+    margin-top: 20pt;
     margin-bottom: 1pt;
     font-size: 90%;
   }
@@ -63,7 +63,7 @@ pre {
   font-size: 100%;
 }
 code { /* inline code */
-  padding: 3pt;
+  padding: 2pt;
   background-color: #eee;
   font-size: 100%;
 }
