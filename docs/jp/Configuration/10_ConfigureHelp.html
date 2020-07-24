@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="mochimo" />
+    <link rel="shortcut icon" href="/mdhelp/jp/img/favicon.ico">
+    <title>ヘルプの構成 | mdhelp</title>
+    <link rel="stylesheet" href="https://mochimochiki.github.io/mdhelp/jp/css/style.min.css">
+    </head>
+  <body>
+    <img src="/mdhelp/jp/img/favicon.ico"><nav class="menu">
+  <h2>MENU</h2>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+  <ul>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="menu-selected">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+  </ul>
+    <li><a href="/mdhelp/jp/ignore.html" class="">ignore</a>
+  </ul>
+</nav>
+<div id="content">
+  <h1>ヘルプの構成</h1>
+  <p>ヘルプを構成するための<code>config.toml</code>の主な項目の説明をします。<a href="https://gohugo.io/getting-started/configuration/">HUGO公式ドキュメント</a>も合わせて参照してください。</p>
+<h2 id="config">Config</h2>
+<h3 id="publishdir">publishDir</h3>
+<p>出力ディレクトリです。<code>public_(environment名)</code>と設定します。例えば<code>chm</code>ディレクトリにconfig.tomlを配置している環境では<code>public_chm</code>と設定します。</p>
+<h3 id="ignorefiles">ignoreFiles</h3>
+<p>無視するファイル。エディションごとで出力ディレクトリやファイルを変更する場合に使用します。例えば<code>ignoreFiles = [&quot;ignore&quot;]</code>とすると<code>ignore</code>の含まれるディレクトリ・ファイルがビルド対象外（ヘルプの目次作成からも対象外）になります。</p>
+<h2 id="configparams">Config.params</h2>
+<p>[params]以下に設定する設定値です。</p>
+<h3 id="author">author</h3>
+<p>フッターに表示されるauthorを設定します。</p>
+<h3 id="copyrightyear">copyRightYear</h3>
+<p>フッターに表示されるCopyRightの年を設定します。</p>
+<h3 id="showmenu">showMenu</h3>
+<p>サイトのツリーメニューを表示するかどうか。この設定は通常Webサイト用のconfig.tomlでは<code>true</code>とし、HTML Help生成用のconfig.tomlでは<code>false</code>にします。</p>
+<h3 id="custom_css">custom_css</h3>
+<p>独自のcssを利用する場合に設定します。例えば<code>/static/css/custom.css</code>にcssファイルを配置した場合、<code>custom_css = [&quot;/css/custom.css&quot;]</code>とするとcssファイルが適用されます。</p>
+<h3 id="custom_js">custom_js</h3>
+<p>独自のjavascriptを利用する場合に設定します。例えば<code>/static/js/custom.js</code>にjsファイルを配置した場合、<code>custom_js = [&quot;/js/custom.js&quot;]</code>とするとjavascriptが適用されます。</p>
+<h3 id="showifs">showIfs</h3>
+<p><code>ShowIf</code>ショートコードで表示する条件。以下は<code>showIfs = [&quot;supportFuncA&quot;]</code>とした場合に描画されるブロックです。</p>
+<pre><code>{{% ShowIf supportFuncA %}}
+ここにxxxをサポートする場合に表示するコンテンツを記述。
+{{% /ShowIf %}}
+</code></pre><h2 id="configlanguages">Config.languages</h2>
+<p>[languages] - [languages.jp] などに設定する設定値です。</p>
+<h3 id="title">title</h3>
+<p>各言語のヘルプタイトルです。ヘルプのファイル名称およびウィンドウタイトルに利用されます。</p>
+<h2 id="フロントマター">フロントマター</h2>
+<p>記事のフロントマターでの設定は以下のとおりです。</p>
+<h3 id="hidehelptoc">hideHelpTOC</h3>
+<p>チャプターのインデックスページをヘルプの目次（ツリーの本アイコン部分）クリックで表示するかどうか。デフォルトでは隠さず表示されます。隠す場合は隠したいチャプターの<code>_index.md</code>のフロントマターに以下のように<code>hideHelpTOC</code>を追加します。</p>
+<pre><code>hideHelpTOC: true
+</code></pre>
+
+    </div><div class="footer">
+  <p class="copyright">
+    &copy; 2020 mochimo.
+  </p>
+</div>
+</body>
+</html>

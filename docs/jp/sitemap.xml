@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/GettingStarted.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/GettingStarted/GettingStarted.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/ignore/MarkdownShowcase.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/10_ConfigureHelp.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/20_shortcodes.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/ignore.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/30_Edition.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/40_CI.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/categories.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/tags.html</loc>
+  </url>
+  
+</urlset>

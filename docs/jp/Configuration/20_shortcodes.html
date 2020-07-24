@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="mochimo" />
+    <link rel="shortcut icon" href="/mdhelp/jp/img/favicon.ico">
+    <title>ショートコード | mdhelp</title>
+    <link rel="stylesheet" href="https://mochimochiki.github.io/mdhelp/jp/css/style.min.css">
+    </head>
+  <body>
+    <img src="/mdhelp/jp/img/favicon.ico"><nav class="menu">
+  <h2>MENU</h2>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+  <ul>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="menu-selected">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+  </ul>
+    <li><a href="/mdhelp/jp/ignore.html" class="">ignore</a>
+  </ul>
+</nav>
+<div id="content">
+  <h1>ショートコード</h1>
+  <p>mdhelpテーマで使用できるショートコードの一覧です。これらはビルドされる HTML Help に対しても有効です。</p>
+<h2 id="showif">ShowIf</h2>
+<p><code>config.toml</code>の<code>showIfs</code>で列挙されている場合に描画する部分を指定します。以下は<code>showIfs = [&quot;supportFuncA&quot;]</code>とした場合に描画されるブロックです。</p>
+<pre><code>{{% ShowIf supportFuncA %}}
+ここにxxxをサポートする場合に表示するコンテンツを記述。
+{{% /ShowIf %}}
+</code></pre><p><a href="./10_ConfigurationHelp.html#showIfs">構成</a>も参照してください。</p>
+<h2 id="note">note</h2>
+<p>注記です。以下のように<code>note</code>ショートコードで囲まれた部分が注記としてレンダリングされます。</p>
+<pre><code>{{% note %}}
+ここに注記文章を記載
+{{% /note %}}
+</code></pre><div class="note">
+  <div class="note_title">Note</div>
+  <div class="note_content">
+<p>ここに注記文章を記載</p>
+  </div>
+</div>
+<p><code>note (title)</code>と言う形式で、引数にタイトルを指定することもできます。note内部にMarkdownを書くことも可能です。</p>
+<pre><code>{{% note 注記 %}}
+ここに注記文章を記載
+
+* markdownも記載可能
+  * 箇条書きレベル2
+* 箇条書きレベル1
+{{% /note %}}
+</code></pre><div class="note">
+  <div class="note_title">注記</div>
+  <div class="note_content">
+<p>ここに注記文章を記載</p>
+<ul>
+<li>
+<p>markdownも記載可能</p>
+<ul>
+<li>箇条書きレベル2</li>
+</ul>
+</li>
+<li>
+<p>箇条書きレベル1</p>
+</div>
+</li>
+</ul>
+</div>
+
+
+    </div><div class="footer">
+  <p class="copyright">
+    &copy; 2020 mochimo.
+  </p>
+</div>
+</body>
+</html>

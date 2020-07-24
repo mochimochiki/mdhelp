@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="mochimo" />
+    <link rel="shortcut icon" href="/mdhelp/jp/img/favicon.ico">
+    <title>エディション | mdhelp</title>
+    <link rel="stylesheet" href="https://mochimochiki.github.io/mdhelp/jp/css/style.min.css">
+    </head>
+  <body>
+    <img src="/mdhelp/jp/img/favicon.ico"><nav class="menu">
+  <h2>MENU</h2>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+  <ul>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="menu-selected">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+  </ul>
+    <li><a href="/mdhelp/jp/ignore.html" class="">ignore</a>
+  </ul>
+</nav>
+<div id="content">
+  <h1>エディション</h1>
+  <p>内容が微妙に異なるヘルプのファミリーを生成する必要がある場合、エディションごとに構成や記事内容を切り替えてビルドできます。</p>
+<h2 id="違うエディションのconfigを作成する">違うエディションのconfigを作成する</h2>
+<p><code>/config/chm_other</code>というディレクトリを作成し、<code>/config/chm/config.toml</code>をコピーして編集することで<code>chm_other</code>エディションを作成することができます。それぞれのエディションのconfigで以下の設定を適切に設定します。</p>
+<h3 id="ディレクトリファイルの構成">ディレクトリ/ファイルの構成</h3>
+<p><code>ignoreFiles = [&quot;ignore&quot;]</code>にリストアップしたディレクトリおよびファイルはビルド対象になりません。エディションによって不要な記事やディレクトリがある場合に設定します。</p>
+<h3 id="記事中の特定要素の表示非表示を切り替える">記事中の特定要素の表示/非表示を切り替える</h3>
+<p><a href="./20_shortcodes.html">ShowIf</a>ショートコードと共に<code>showIfs</code>を使用することで表示/非表示を切り替えます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
+  <span style="color:#a6e22e">showIfs</span> = [<span style="color:#e6db74">&#34;supportFuncA&#34;</span>]
+</code></pre></div><p>この場合、<code>.md</code>の記事で以下のように記載した要素が表示されます。</p>
+<pre><code>{{% ShowIf supportFuncA %}}
+ここにsupportFuncAをサポートする場合に表示するコンテンツを記述。
+{{% /ShowIf %}}
+</code></pre><h2 id="ビルドする">ビルドする</h2>
+<p>エディションを指定してビルドするには、<code>/CI/build.bat (edhition)</code>のようにバッチの引数にエディションを指定します。例えば<code>chm_other</code>エディションをビルドするには以下のように指定します。</p>
+<pre><code>.\CI\build.bat chm_other
+</code></pre>
+
+    </div><div class="footer">
+  <p class="copyright">
+    &copy; 2020 mochimo.
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on mdhelp</title>
+    <link>https://mochimochiki.github.io/mdhelp/jp/GettingStarted.html</link>
+    <description>Recent content in Getting Started on mdhelp</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    
+	<atom:link href="https://mochimochiki.github.io/mdhelp/jp/GettingStarted/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://mochimochiki.github.io/mdhelp/jp/GettingStarted/GettingStarted.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mochimochiki.github.io/mdhelp/jp/GettingStarted/GettingStarted.html</guid>
+      <description>準備 HUGOとHTML Help Workshopのインストールがまだであれば、まずはインストールを行います。その後、hugo.exeおよびhhc.e</description>
+    </item>
+    
+  </channel>
+</rss>

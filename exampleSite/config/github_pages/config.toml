@@ -1,0 +1,10 @@
+baseURL = "https://mochimochiki.github.io/mdhelp/jp/"
+publishDir = "../docs"
+disableLanguages = ["en"]
+[params]
+    author = "mochimo"
+    copyRightYear = "2020"
+[languages]
+  [languages.jp]
+    publishDir = "../docs"
+    baseURL = "https://mochimochiki.github.io/mdhelp/jp/"

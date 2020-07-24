@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="mochimo" />
+    <link rel="shortcut icon" href="/mdhelp/jp/img/favicon.ico">
+    <title>Getting Started | mdhelp</title>
+    <link rel="stylesheet" href="https://mochimochiki.github.io/mdhelp/jp/css/style.min.css">
+    </head>
+  <body>
+    <img src="/mdhelp/jp/img/favicon.ico"><nav class="menu">
+  <h2>MENU</h2>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted/GettingStarted.html" class="menu-selected">Getting Started</a>
+  </ul>
+    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/ignore.html" class="">ignore</a>
+  </ul>
+</nav>
+<div id="content">
+  <h1>Getting Started</h1>
+  <h2 id="準備">準備</h2>
+<p><a href="https://gohugo.io/">HUGO</a>と<a href="https://www.microsoft.com/en-us/download/details.aspx?id=21138">HTML Help Workshop</a>のインストールがまだであれば、まずはインストールを行います。その後、<code>hugo.exe</code>および<code>hhc.exe</code>に<code>PATH</code>を通しておきます。</p>
+<h2 id="インストール">インストール</h2>
+<p>新しいプロジェクトを作成します。ここでは<code>myhelp</code>という名称としてみましょう。</p>
+<pre><code>hugo new site myhelp
+cd myhelp
+</code></pre><h3 id="mdhelpテーマをインストールする">MDHELPテーマをインストールする</h3>
+<p>ここでは<a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">HUGO公式ドキュメント</a>に沿ってgitでテーマを取得します。</p>
+<pre><code>git init
+git submodule add https://github.com/mochimochiki/mdhelp themes/mdhelp
+</code></pre><p>gitを利用しない場合、<a href="https://github.com/mochimochiki/mdhelp/archive/master.zip">最新のzip</a>もしくは<a href="https://github.com/mochimochiki/mdhelp/releases">任意のRelease</a>をダウンロード・解凍し、<code>themes\mdhelp</code>に配置してください。</p>
+<h3 id="必要なファイルをコピーする">必要なファイルをコピーする</h3>
+<p>以下のコマンドでヘルプのビルドに必要なツール類とconfigをコピーして<code>myhelp</code>プロジェクトに配置します。また、デフォルトのconfig.tomlは削除しておきます。</p>
+<pre><code>xcopy /s themes\mdhelp\exampleSite\config config\
+xcopy /s themes\mdhelp\exampleSite\CI CI\
+rm config.toml
+</code></pre><h2 id="最初のサイトの作成">最初のサイトの作成</h2>
+<h3 id="configtomlの編集">config.tomlの編集</h3>
+<p><code>config\_default\config.toml</code>を開き、以下の行をコメントアウトもしくは削除します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">themesdir</span> = <span style="color:#e6db74">&#34;../..&#34;</span>
+</code></pre></div><p>また、日英ともにサイト・ヘルプのタイトルを<code>MyHelp</code>に変えておきます。各言語の<code>title</code>の設定を以下のように編集します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">jp</span>]
+  ...
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;MyHelp&#34;</span>
+  ...
+[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+  ...
+  <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;MyHelp&#34;</span>
+  ...
+</code></pre></div><p>その他のconfigパラメータについては<a href="../Configuration/10_ConfigureHelp.html">ヘルプの構成</a>および<a href="https://gohugo.io/getting-started/configuration/">HUGO公式ドキュメント</a>などを参照してください。</p>
+<h3 id="トップページの作成">トップページの作成</h3>
+<p><code>content</code>ディレクトリ下に<code>jp</code>,<code>en</code>ディレクトリを作成します。</p>
+<pre><code>mkdir content\jp
+mkdir content\en
+</code></pre><p><code>jp</code>および<code>en</code>下に<code>_index.md</code>ファイルを作成して以下のように編集し、文字コードUTF-8で保存します。</p>
+<div class="note">
+  <div class="note_title">Note</div>
+  <div class="note_content">
+<p>ディレクトリのファイル名はASCII文字で記述してください。日本語ファイル名をつけるとヘルプが正常にビルドされません。</p>
+  </div>
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;My Help&#34;
+---
+
+# My Help
+
+My Help サイトです。
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;My Help&#34;
+---
+
+# My Help
+
+This is My Help.
+
+</code></pre></div><h3 id="記事の作成">記事の作成</h3>
+<p>次に記事を作成します。<code>jp</code>下に<code>Hello.md</code>を作成して以下のように編集します。</p>
+<div class="note">
+  <div class="note_title">Note</div>
+  <div class="note_content">
+<p>※記事のファイル名はASCII文字で記述してください。日本語ファイル名をつけるとヘルプが正常にビルドされません。</p>
+  </div>
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;Hello&#34;
+weight: 10
+---
+
+<span style="color:#75715e">## Hello
+</span><span style="color:#75715e"></span>
+こんにちは。
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;Hello&#34;
+weight: 10
+---
+
+<span style="color:#75715e">## Hello
+</span><span style="color:#75715e"></span>
+Hello World !
+</code></pre></div><h3 id="サイトをプレビューする">サイトをプレビューする</h3>
+<p>ここまでで一度プレビューしてみましょう。以下のコマンドを実行し、ブラウザで<code>http://localhost:1313/</code>および<code>http://localhost:1314/</code>にアクセスします。</p>
+<pre><code>hugo server
+</code></pre><p><code>Hello.md</code>を適当に編集して保存してみます。LiveReloadがかかり、ブラウザ上のプレビューも更新されることを確認します。原稿はこのようにプレビューで執筆していきます。</p>
+<h3 id="ディレクトリと2番目の記事を追加する">ディレクトリと2番目の記事を追加する</h3>
+<p><code>jp</code>下に<code>second_content</code>ディレクトリを作成し、<code>_index.md</code>を作成して以下のように編集します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;Second Chapter&#34;
+chapter: true
+weight: 20
+---
+
+# Second Chapter
+
+2番目のチャプターです。
+</code></pre></div><p>また<code>second.md</code>を作成して以下のように編集して保存します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+title: &#34;2番目の記事&#34;
+weight: 10
+---
+
+<span style="color:#75715e">## 2番目の記事
+</span><span style="color:#75715e"></span>
+こんにちは。これは2番目の記事です。
+</code></pre></div><p>再度プレビューを表示し、2番目の記事が表示されることを確認します。</p>
+<pre><code>hugo server
+</code></pre><h2 id="ヘルプの作成">ヘルプの作成</h2>
+<p><code>Ctrl+C</code> でhugoのプレビューを終了し、以下のコマンドを実行してヘルプをビルドします。</p>
+<pre><code>.\CI\build.bat chm
+</code></pre><ul>
+<li><code>myhelp\public_chm\jp\MyHelp.chm</code></li>
+<li><code>myhelp\public_chm\en\MyHelp.chm</code></li>
+</ul>
+<p>が成果物のヘルプです。確認してみましょう。</p>
+
+
+    </div><div class="footer">
+  <p class="copyright">
+    &copy; 2020 mochimo.
+  </p>
+</div>
+</body>
+</html>
