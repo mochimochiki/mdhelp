@@ -43,7 +43,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mochimochiki.github.io/mdhelp/jp/Configuration/30_Edition.html</guid>
-      <description>内容が微妙に異なるヘルプのファミリーを生成する必要がある場合、エディションごとに構成や記事内容を切り替えてビルドできます。 違うエディションの</description>
+      <description>内容が微妙に異なるヘルプのファミリーを生成する必要がある場合、HUGOのConfiguration Directoryの仕組みを利用してエディ</description>
     </item>
     
     <item>
