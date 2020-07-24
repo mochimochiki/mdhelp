@@ -44,3 +44,6 @@ hhc.exe public_%hugo_env%\en\project.hhp
 if not %errorlevel% == 1 exit /B 1
 
 popd
+
+echo build was completed.
+exit /B 0
