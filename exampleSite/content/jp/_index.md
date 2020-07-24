@@ -4,7 +4,11 @@ title: "MDHELP"
 
 # MDHELP
 
-MDHELP は HTML Help (.chm) のヘルプを生成することを目的としたHUGOのテーマです。本ドキュメントは`/exampleSite`をmdhelpでビルドしたものです。同じドキュメントのHTML Help版は[こちら](./mdhelpDocs.chm)です。
+MDHELP は HTML Help (.chm) のヘルプを生成することを目的としたHUGOのテーマです。
+
+![](assets/2020-07-24-20-03-52.png)
+
+本ドキュメントは`/exampleSite`をmdhelpでビルドしたものです。同じドキュメントのHTML Help版は[こちら](./mdhelpDocs.chm)です。
 
 {{% note %}}
 `mdhelpDocs.chm`を開いてもコンテンツ部分が白い表示となる場合は、`mdhelpDocs.chm`を右クリックしてプロパティを開き、`[全般]-[セキュリティ]`で
