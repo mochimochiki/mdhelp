@@ -15,7 +15,7 @@ mdhelpテーマで使用できるショートコードの一覧です。これ�
 {{%/* /ShowIf */%}}
 ```
 
-[構成](./10_ConfigurationHelp.html#showIfs)も参照してください。
+[構成](./10_ConfigureHelp.html#showIfs)も参照してください。
 
 ## note
 

@@ -40,7 +40,7 @@
 <pre><code>/public_chm_your_edition/jp/(helpTitle).chm
 /public_chm_your_edition/en/(helpTitle).chm
 </code></pre><h3 id="utf8からsjisに変換できない文字のリスト">UTF8からSJISに変換できない文字のリスト</h3>
-<p>HUGOはUTF8のWebサイトを生成しますが、HTMLHelpで日本語を扱うためにはSJIS(Windows CP932)へ変換する必要があります。変換は<code>build.bat</code>の処理で行われますが。SJISに対応文字がなく、変換できなかった文字については、<code>build.bat</code>と同じディレクトリの<code>unknonw_(edition).log</code>に記録されます。</p>
+<p>HUGOはUTF8のWebサイトを生成しますが、HTMLHelpで日本語を扱うためにはSJIS(Windows CP932)へ変換する必要があります。変換は<code>build.bat</code>の処理で行われますが、SJISに対応文字がなく変換できなかった文字については、<code>build.bat</code>と同じディレクトリの<code>unknonw_(edition).log</code>に記録されます。</p>
 <h4 id="置換できない文字の例">置換できない文字の例</h4>
 <p>SJISの対応文字に置換できない文字は&rdquo;?&ldquo;で置換されます。例えば以下の文字はHTML Helpでは&rdquo;?&ldquo;となります。</p>
 <p>30F7	ヷ<br>
@@ -50,7 +50,7 @@
 <h4 id="カスタムマッピング">カスタムマッピング</h4>
 <p>変換できない文字をSJISの特定文字にマッピングするには、<code>/CI/UTF8toSJISConverter.cs</code>の<code>Fallback</code>メソッドの<code>switch</code>文を編集します。</p>
 <h3 id="エラー処理">エラー処理</h3>
-<p>エラー時はエラーコード<code>1</code>を返します。バッチから呼ぶ場合、例えば以下のようにエラー処理できます。</p>
+<p><code>build.bat</code>はエラー時にエラーコード<code>1</code>を返します。バッチから呼ぶ場合、例えば以下のようにエラー処理できます。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">.\CI\build.bat chm_your_edition
 <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">not</span> %errorlevel% <span style="color:#f92672">==</span> 0 <span style="color:#66d9ef">exit</span> /B 1
 </code></pre></div>

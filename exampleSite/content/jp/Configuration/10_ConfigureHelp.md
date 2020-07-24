@@ -8,8 +8,8 @@ weight: 10
 ## Config
 
 ### publishDir
+出力ディレクトリです。`public_(environment名)`と設定します。例えば`chm`ディレクトリに配置した`config.toml`では`public_chm`と設定します。
 
-出力ディレクトリです。`public_(environment名)`と設定します。例えば`chm`ディレクトリにconfig.tomlを配置している環境では`public_chm`と設定します。
 
 ### ignoreFiles
 
@@ -29,11 +29,11 @@ weight: 10
 
 ### isCHM
 
-CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false`とし、HTML Help生成用のconfig.tomlでは`true`にします。テンプレートを使用してWebサイト生成時とヘルプ生成時で処理を分けるために使用します。
+CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false`とし、HTML Help生成用のconfig.tomlでは`true`にします。テンプレートでWebサイトとヘルプ生成時で処理を分ける際に使用します。
 
 ### custom_css
 
-独自のcssを利用する場合に設定します。例えば`/static/css/custom.css`にcssファイルを配置した場合、`custom_css = ["/css/custom.css"]`とするとcssファイルが適用されます。
+独自のcssを利用する場合に設定します。例えば`/static/css/custom.css`にcssファイルを配置し`custom_css = ["/css/custom.css"]`とすると`custom.css`が適用されます。
 
 ### custom_js
 
@@ -41,13 +41,21 @@ CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false
 
 ### showIfs
 
-`ShowIf`ショートコードで表示する条件。以下は`showIfs = ["supportFuncA"]`とした場合に描画されるブロックです。
+`ShowIf`ショートコードで表示する条件の一覧。
+
+```
+showIfs = ["supportFuncA", "supportFuncB"]
+```
+
+例えば上記のように設定した場合、`.md`ファイルで以下のブロックは表示されます。
 
 ```
 {{%/* ShowIf supportFuncA */%}}
-ここにxxxをサポートする場合に表示するコンテンツを記述。
+ここにFuncAをサポートする場合に表示するコンテンツを記述。
 {{%/* /ShowIf */%}}
 ```
+
+本設定について詳しくは[エディション](./30_Edition.html)を参照してください。
 
 ## Config.languages
 
@@ -63,7 +71,7 @@ CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false
 
 ### hideHelpTOC
 
-チャプターのインデックスページをヘルプの目次（ツリーの本アイコン部分）クリックで表示するかどうか。デフォルトでは隠さず表示されます。隠す場合は隠したいチャプターの`_index.md`のフロントマターに以下のように`hideHelpTOC`を追加します。
+ヘルプの目次のチャプター（ツリーの本アイコン部分）として表示するかどうか。デフォルトでは表示されます。隠す場合はチャプターの`_index.md`のフロントマターに以下のように`hideHelpTOC`を追加します。
 
 ```
 hideHelpTOC: true

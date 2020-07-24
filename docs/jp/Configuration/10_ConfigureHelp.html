@@ -28,7 +28,7 @@
   <p>ヘルプを構成するための<code>config.toml</code>の主な項目の説明をします。<a href="https://gohugo.io/getting-started/configuration/">HUGO公式ドキュメント</a>も合わせて参照してください。</p>
 <h2 id="config">Config</h2>
 <h3 id="publishdir">publishDir</h3>
-<p>出力ディレクトリです。<code>public_(environment名)</code>と設定します。例えば<code>chm</code>ディレクトリにconfig.tomlを配置している環境では<code>public_chm</code>と設定します。</p>
+<p>出力ディレクトリです。<code>public_(environment名)</code>と設定します。例えば<code>chm</code>ディレクトリに配置した<code>config.toml</code>では<code>public_chm</code>と設定します。</p>
 <h3 id="ignorefiles">ignoreFiles</h3>
 <p>無視するファイル。エディションごとで出力ディレクトリやファイルを変更する場合に使用します。例えば<code>ignoreFiles = [&quot;ignore&quot;]</code>とすると<code>ignore</code>の含まれるディレクトリ・ファイルがビルド対象外（ヘルプの目次作成からも対象外）になります。</p>
 <h2 id="configparams">Config.params</h2>
@@ -38,24 +38,27 @@
 <h3 id="copyrightyear">copyRightYear</h3>
 <p>フッターに表示されるCopyRightの年を設定します。</p>
 <h3 id="ischm">isCHM</h3>
-<p>CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは<code>false</code>とし、HTML Help生成用のconfig.tomlでは<code>true</code>にします。テンプレートを使用してWebサイト生成時とヘルプ生成時で処理を分けるために使用します。</p>
+<p>CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは<code>false</code>とし、HTML Help生成用のconfig.tomlでは<code>true</code>にします。テンプレートでWebサイトとヘルプ生成時で処理を分ける際に使用します。</p>
 <h3 id="custom_css">custom_css</h3>
-<p>独自のcssを利用する場合に設定します。例えば<code>/static/css/custom.css</code>にcssファイルを配置した場合、<code>custom_css = [&quot;/css/custom.css&quot;]</code>とするとcssファイルが適用されます。</p>
+<p>独自のcssを利用する場合に設定します。例えば<code>/static/css/custom.css</code>にcssファイルを配置し<code>custom_css = [&quot;/css/custom.css&quot;]</code>とすると<code>custom.css</code>が適用されます。</p>
 <h3 id="custom_js">custom_js</h3>
 <p>独自のjavascriptを利用する場合に設定します。例えば<code>/static/js/custom.js</code>にjsファイルを配置した場合、<code>custom_js = [&quot;/js/custom.js&quot;]</code>とするとjavascriptが適用されます。</p>
 <h3 id="showifs">showIfs</h3>
-<p><code>ShowIf</code>ショートコードで表示する条件。以下は<code>showIfs = [&quot;supportFuncA&quot;]</code>とした場合に描画されるブロックです。</p>
+<p><code>ShowIf</code>ショートコードで表示する条件の一覧。</p>
+<pre><code>showIfs = [&quot;supportFuncA&quot;, &quot;supportFuncB&quot;]
+</code></pre><p>例えば上記のように設定した場合、<code>.md</code>ファイルで以下のブロックは表示されます。</p>
 <pre><code>{{% ShowIf supportFuncA %}}
-ここにxxxをサポートする場合に表示するコンテンツを記述。
+ここにFuncAをサポートする場合に表示するコンテンツを記述。
 {{% /ShowIf %}}
-</code></pre><h2 id="configlanguages">Config.languages</h2>
+</code></pre><p>本設定について詳しくは<a href="./30_Edition.html">エディション</a>を参照してください。</p>
+<h2 id="configlanguages">Config.languages</h2>
 <p>[languages] - [languages.jp] などに設定する設定値です。</p>
 <h3 id="title">title</h3>
 <p>各言語のヘルプタイトルです。ヘルプのファイル名称およびウィンドウタイトルに利用されます。</p>
 <h2 id="フロントマター">フロントマター</h2>
 <p>記事のフロントマターでの設定は以下のとおりです。</p>
 <h3 id="hidehelptoc">hideHelpTOC</h3>
-<p>チャプターのインデックスページをヘルプの目次（ツリーの本アイコン部分）クリックで表示するかどうか。デフォルトでは隠さず表示されます。隠す場合は隠したいチャプターの<code>_index.md</code>のフロントマターに以下のように<code>hideHelpTOC</code>を追加します。</p>
+<p>ヘルプの目次のチャプター（ツリーの本アイコン部分）として表示するかどうか。デフォルトでは表示されます。隠す場合はチャプターの<code>_index.md</code>のフロントマターに以下のように<code>hideHelpTOC</code>を追加します。</p>
 <pre><code>hideHelpTOC: true
 </code></pre>
 

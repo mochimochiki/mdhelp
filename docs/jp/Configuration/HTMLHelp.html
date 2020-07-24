@@ -35,20 +35,20 @@
 </thead>
 <tbody>
 <tr>
-<td align="left"><code>project.hhp</code></td>
+<td align="left">project.hhp</td>
 <td align="left">ヘルプのプロジェクトファイル。オプションなどを定義。</td>
 </tr>
 <tr>
-<td align="left"><code>toc.hhc</code></td>
+<td align="left">toc.hhc</td>
 <td align="left">目次定義ファイル</td>
 </tr>
 <tr>
-<td align="left"><code>Map.h</code></td>
+<td align="left">Map.h</td>
 <td align="left">HelpID定義ファイル。</td>
 </tr>
 </tbody>
 </table>
-<p>mdhelpはこれらの構成ファイルを基本的に自動で生成します。ただし、プログラムからヘルプIDを指定して特定ページを呼び出すためにヘルプのAPI情報を定義する場合は自前で<code>Map.h</code>を準備する必要があります。mdhelpは<code>/static/Map.h</code>を使用してヘルプをコンパイルするため、<code>/static/Map.h</code>にマップファイルを作成します。</p>
+<p>mdhelpはこれらの構成ファイルを基本的に自動で生成します。ただし、プログラムからヘルプIDを指定して特定ページを呼び出すためにヘルプのAPI情報を定義する場合は、自前で<code>Map.h</code>を準備する必要があります。mdhelpは<code>/static/Map.h</code>を使用してヘルプをコンパイルするため、<code>/static/Map.h</code>にマップファイルを作成します。</p>
 <h2 id="maph-を作成する">Map.h を作成する</h2>
 <p>mdhelpの<code>build.bat</code>でヘルプをビルドすると、<code>publishDir</code>に成果物のヘルプファイルと共に<code>MapTemplate.h</code>が生成されます。これはヘルプのすべてのページのHelpIDのテンプレートを含みます。プログラムからヘルプのページを呼び出すために<code>Map.h</code>を用意する場合、このテンプレートの各IDに対して一意の数値をふり、<code>/static/Map.h</code>として保存してから、再ビルドしてください。</p>
 <div class="note">

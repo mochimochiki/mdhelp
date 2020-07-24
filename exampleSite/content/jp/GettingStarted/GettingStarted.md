@@ -18,7 +18,7 @@ cd myhelp
 
 ### MDHELPテーマをインストールする
 
-ここでは[HUGO公式ドキュメント](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)に沿ってgitでテーマを取得します。
+[HUGO公式ドキュメント](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)に沿ってgitでテーマを取得します。
 
 ```
 git init
@@ -47,7 +47,7 @@ rm config.toml
 themesdir = "../.."
 ```
 
-また、日英ともにサイト・ヘルプのタイトルを`MyHelp`に変えておきます。各言語の`title`の設定を以下のように編集します。
+ヘルプのタイトルを`MyHelp`に変更します。各言語の`title`の設定を以下のように編集します。
 
 ```toml
 [languages.jp]
@@ -73,10 +73,6 @@ mkdir content\en
 
 `jp`および`en`下に`_index.md`ファイルを作成して以下のように編集し、文字コードUTF-8で保存します。
 
-{{% note %}}
-ディレクトリのファイル名はASCII文字で記述してください。日本語ファイル名をつけるとヘルプが正常にビルドされません。
-{{% /note %}}
-
 ```md
 ---
 title: "My Help"
@@ -101,11 +97,7 @@ This is My Help.
 
 ### 記事の作成
 
-次に記事を作成します。`jp`下に`Hello.md`を作成して以下のように編集します。
-
-{{% note %}}
-※記事のファイル名はASCII文字で記述してください。日本語ファイル名をつけるとヘルプが正常にビルドされません。
-{{% /note %}}
+次に記事を作成します。`jp`および`en`下に`Hello.md`を作成して以下のように編集します。
 
 ```md
 ---
@@ -129,6 +121,10 @@ weight: 10
 Hello World !
 ```
 
+{{% note %}}
+記事のファイル名はASCII文字で記述してください。日本語ファイル名をつけるとヘルプが正常にビルドされません。
+{{% /note %}}
+
 ### サイトをプレビューする
 
 ここまでで一度プレビューしてみましょう。以下のコマンドを実行し、ブラウザで`http://localhost:1313/`および`http://localhost:1314/`にアクセスします。
@@ -143,6 +139,7 @@ hugo server
 
 `jp`下に`second_content`ディレクトリを作成し、`_index.md`を作成して以下のように編集します。
 
+
 ```md
 ---
 title: "Second Chapter"
@@ -154,6 +151,10 @@ weight: 20
 
 2番目のチャプターです。
 ```
+
+{{% note %}}
+ディレクトリ名はASCII文字で記述してください。日本語を使用するとヘルプが正常にビルドされません。
+{{% /note %}}
 
 また`second.md`を作成して以下のように編集して保存します。
 
