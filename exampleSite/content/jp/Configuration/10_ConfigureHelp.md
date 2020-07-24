@@ -29,7 +29,7 @@ weight: 10
 
 ### isCHM
 
-CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`true`とし、HTML Help生成用のconfig.tomlでは`false`にします。テンプレートを使用してWebサイト生成時とヘルプ生成時で処理を分けるために使用します。
+CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false`とし、HTML Help生成用のconfig.tomlでは`true`にします。テンプレートを使用してWebサイト生成時とヘルプ生成時で処理を分けるために使用します。
 
 ### custom_css
 
