@@ -1,5 +1,6 @@
 baseURL = ""
 themesdir = "../.."
+title = "mdhelp"
 theme = "mdhelp"
 languageCode = "ja-jp"
 DefaultContentLanguage = "jp"
@@ -20,7 +21,6 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
 [languages]
   [languages.jp]
     baseURL = "."
-    title = "mdhelp"
     languageName = "Japanese"
     contentDir = "content/jp"
     weight = 1
@@ -29,7 +29,6 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
     htmlcharset = "Shift_JIS" # for Help Html
   [languages.en]
     baseURL = "."
-    title = "mdhelp"
     languageName = "English"
     contentDir = "content/en"
     weight = 2

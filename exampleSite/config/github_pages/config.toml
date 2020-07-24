@@ -1,11 +1,8 @@
-baseURL = "https://mochimochiki.github.io/mdhelp/jp/"
 publishDir = "../docs"
-disableLanguages = ["en"]
 ignoreFiles = ["ignore"]
 [params]
     author = "mochimo"
     copyRightYear = "2020"
 [languages]
   [languages.jp]
-    publishDir = "../docs"
     baseURL = "https://mochimochiki.github.io/mdhelp/jp/"

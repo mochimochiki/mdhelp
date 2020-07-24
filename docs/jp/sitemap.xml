@@ -32,14 +32,44 @@
   
   <url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/categories.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./categories.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/categories.html"
+                />
   </url>
   
   <url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/"
+                />
   </url>
   
   <url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/tags.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./tags.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/tags.html"
+                />
   </url>
   
 </urlset>

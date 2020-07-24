@@ -2,6 +2,8 @@
 
 mdhelpはHTML Help(.chm)のヘルプを生成することを目的とした[HUGO](https://gohugo.io/)のテーマです。テーマ本体に加え、HTML Help生成に利用するツールなどを含んでいます。HTML Helpの生成には別途[HTML Help Workshop](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/htmlhelp/microsoft-html-help-downloads)が必要です。
 
+詳しい使い方は[mdhelp Docs](https://mochimochiki.github.io/mdhelp/jp/)を参照してください。
+
 ## 使い方
 
 ### 前提条件
