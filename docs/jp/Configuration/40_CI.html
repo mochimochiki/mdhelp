@@ -40,7 +40,7 @@
 </code></pre><h3 id="utf8からsjisに変換できない文字のリスト">UTF8からSJISに変換できない文字のリスト</h3>
 <p>HUGOはUTF8のWebサイトを生成しますが、HTMLHelpで日本語を扱うためにはSJIS(Windows CP932)へ変換する必要があります。変換は<code>build.bat</code>の処理で行われますが。SJISに対応文字がなく、変換できなかった文字については、<code>build.bat</code>と同じディレクトリの<code>unknonw_(edition).log</code>に記録されます。</p>
 <h4 id="置換できない文字の例">置換できない文字の例</h4>
-<p>SJISの対応文字に置換できない文字は以下のように&rdquo;?&ldquo;で置換されます。</p>
+<p>SJISの対応文字に置換できない文字は&rdquo;?&ldquo;で置換されます。例えば以下の文字はHTML Helpでは&rdquo;?&ldquo;となります。</p>
 <p>30F7	ヷ<br>
 30F8	ヸ<br>
 30F9	ヹ<br>
