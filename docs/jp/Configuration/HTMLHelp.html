@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="Shift_JIS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="mochimo" />
+    <link rel="shortcut icon" href="/mdhelp/jp/img/favicon.ico">
+    <title>HTML Helpの構成ファイル | mdhelp</title>
+    <link rel="stylesheet" href="https://mochimochiki.github.io/mdhelp/jp/css/style.min.css">
+    </head>
+  <body><nav class="menu">
+  <h2>MENU</h2>
+  <ul>
+    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+  <ul>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" class="menu-selected">HTML Helpの構成ファイル</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+  </ul>
+  </ul>
+</nav>
+
+    <div id="content">
+  <h1>HTML Helpの構成ファイル</h1>
+  <p>HTML Help をビルドするには以下のような構成ファイルが必要です。</p>
+<table>
+<thead>
+<tr>
+<th align="left">ファイル</th>
+<th align="left">説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>project.hhp</code></td>
+<td align="left">ヘルプのプロジェクトファイル。オプションなどを定義。</td>
+</tr>
+<tr>
+<td align="left"><code>toc.hhc</code></td>
+<td align="left">目次定義ファイル</td>
+</tr>
+<tr>
+<td align="left"><code>Map.h</code></td>
+<td align="left">HelpID定義ファイル。</td>
+</tr>
+</tbody>
+</table>
+<p>mdhelpはこれらの構成ファイルを基本的に自動で生成します。ただし、プログラムからヘルプIDを指定して特定ページを呼び出すためにヘルプのAPI情報を定義する場合は自前で<code>Map.h</code>を準備する必要があります。mdhelpは<code>/static/Map.h</code>を使用してヘルプをコンパイルするため、<code>/static/Map.h</code>にマップファイルを作成します。</p>
+<h2 id="maph-を作成する">Map.h を作成する</h2>
+<p>mdhelpの<code>build.bat</code>でヘルプをビルドすると、<code>publishDir</code>に成果物のヘルプファイルと共に<code>MapTemplate.h</code>が生成されます。これはヘルプのすべてのページのHelpIDのテンプレートを含みます。プログラムからヘルプのページを呼び出すために<code>Map.h</code>を用意する場合、このテンプレートの各IDに対して一意の数値をふり、<code>/static/Map.h</code>として保存してから、再ビルドしてください。</p>
+<div class="note">
+  <div class="note_title">Note</div>
+  <div class="note_content">
+<p>この作業はページが増えた際にも必要になります。増えたページのID分を<code>/static/Map.h</code>に足します。</p>
+  </div>
+</div>
+<h2 id="projecthhp-をカスタマイズする">project.hhp をカスタマイズする</h2>
+<p><code>project.hhp</code>はHUGOのテンプレートの仕組みで生成しています。そのため通常のテンプレートと同様<code>/themes/mdhelp/layouts/index.hhp</code>を<code>/layouts/index.hhp</code>にコピーして編集すれば自由にカスタマイズすることができます。</p>
+
+
+    </div><div class="footer">
+  <p class="copyright">
+    &copy; 2020 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
+  </p>
+</div>
+</body>
+</html>

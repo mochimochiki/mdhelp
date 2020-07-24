@@ -27,9 +27,9 @@ weight: 10
 
 フッターに表示されるCopyRightの年を設定します。
 
-### showMenu
+### isCHM
 
-サイトのツリーメニューを表示するかどうか。この設定は通常Webサイト用のconfig.tomlでは`true`とし、HTML Help生成用のconfig.tomlでは`false`にします。
+CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`true`とし、HTML Help生成用のconfig.tomlでは`false`にします。テンプレートを使用してWebサイト生成時とヘルプ生成時で処理を分けるために使用します。
 
 ### custom_css
 

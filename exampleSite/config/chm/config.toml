@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT
 [params]
   # ShowIfショートコードで表示するコンテンツの一覧
   showIfs = ["supportFuncA"]
-  showMenu = false
+  isCHM = true
 
 [outputs]
   home = [ "HTML", "HHC", "HHP", "MAPTEMP"] # hhc/hhp/maptemplateも生成

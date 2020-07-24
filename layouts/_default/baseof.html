@@ -16,7 +16,7 @@
   </head>
   <body>
     {{- partial "header.html" . -}}
-    {{- if .Site.Params.showMenu }} {{- partial "menu.html" . -}} {{- end }}
+    {{- if ne .Site.Params.isCHM true }} {{- partial "menu.html" . -}} {{- end }}
     <div id="content">
     {{- block "main" . }}{{- end }}
     </div>
