@@ -30,8 +30,6 @@ cd mdhelp
 
 * `.\exampleSite\public_chm\jp\mdhelp.chm`
 * `.\exampleSite\public_chm\en\mdhelp.chm`
-* `.\exampleSite\public_chm_other_version\jp\mdhelp.chm`
-* `.\exampleSite\public_chm_other_version\en\mdhelp.chm`
 
 ## 制約
 
