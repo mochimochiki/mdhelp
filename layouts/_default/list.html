@@ -1,9 +1,4 @@
 {{ define "main" }}
   {{ .Page.Content }}
-  <h3>Sections</h3>
-  <ul>
-    {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
 {{ end }}
+
