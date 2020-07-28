@@ -31,28 +31,30 @@ h1 {
 h2 {
   margin-top: 30pt;
   margin-bottom: 15pt;
-  font-size: 200%;
+  font-size: 210%;
   border-bottom: 1px solid #ccc;
 }
 h3 {
   margin-top: 30pt;
   margin-bottom: 5pt;
-  font-size: 150%;
+  font-size: 170%;
 }
 h4 {
   margin-top: 25pt;
   margin-bottom: 5pt;
-  font-size: 120%;
+  font-size: 130%;
 }
 h5 {
-  margin-top: 20pt;
-  margin-bottom: 2pt;
-  font-size: 110%;
+  margin-top: 5pt;
+  margin-bottom: 0pt;
+  font-size: 100%;
+  color: #67b8ff;
 }
 h6 {
-    margin-top: 20pt;
-    margin-bottom: 1pt;
-    font-size: 90%;
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    font-size: 80%;
+    color: #67b8ff;
   }
 a {
   color: #1C90F3;
