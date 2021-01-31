@@ -29,7 +29,7 @@ if not %errorlevel% == 0 exit /B 1
 :: convert to sjis
 pushd %scriptdir%
 powershell -NoProfile -ExecutionPolicy RemoteSigned ^
-  ".\UTF8toSJIS.ps1 -dir \"%hugodir%\public_%hugo_env%\jp\" -logname unknown_%hugo_env%.log;exit $LASTEXITCODE"
+  ".\UTF8toLocalCode.ps1 -dir \"%hugodir%\public_%hugo_env%\jp\" -codename shift_jis -custom_table utf8_to_shift_jis.csv -logname unknown_%hugo_env%.log;exit $LASTEXITCODE"
 if not %errorlevel% == 0 exit /B 1
 popd
 
