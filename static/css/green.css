@@ -2,10 +2,10 @@
 
 /* Base */
 html {
-    font-family:  'メイリオ', '游ゴシック Medium', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'メイリオ', '游ゴシック Medium', 'メイリオ', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: medium;
     color: #333333;
-    background-color: #fafafa;
+    background-color: #ffffff;
 }
 
 /* content */
@@ -30,40 +30,49 @@ h1 {
   padding-left: 20pt;
   padding-top:  20pt;
   padding-bottom: 10pt;
-  color: #fafafa;
-  background: #333333;
+  color: #FFFFFF;
+  background: #008B3F;
+  border-bottom: solid 0px #008B3F;
+}
+h1 a {
+  color: #fff;
 }
 h2 {
   margin-top: 30pt;
   margin-bottom: 8pt;
   font-weight: 900;
   font-size: 190%;
-  border-bottom: solid #333333;
+  border-bottom: solid #008B3F;
   border-width: 5pt;
+  color: #008B3F;
 }
 h3 {
   margin-top: 20pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 150%;
+  color: #008B3F;
 }
 h4 {
   margin-top: 20pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 130%;
+  color: #008B3F;
 }
 h5 {
   margin-top: 5pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 100%;
+  color: #008B3F;
 }
 h6 {
     margin-top: 0pt;
     margin-bottom: 0pt;
     font-weight: 900;
     font-size: 85%;
+    color: #008B3F;
   }
 a {
   color: #1C90F3;
@@ -75,7 +84,7 @@ img {
 pre {
   padding: 8pt;
   background-color:#272822;
-  color: #f5f5f5;
+  color: #f3f3f3;
   tab-size:4;
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   line-height: 120%;
@@ -86,7 +95,7 @@ code { /* inline code */
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   padding: 2pt;
   margin-top: 20pt;
-  background-color: #eee;
+  background-color: #f3f3f3;
   font-size: 100%;
   white-space: pre-wrap;
 }
@@ -96,14 +105,14 @@ pre code {
   margin-top: 20pt;
   margin-bottom: 20pt;
   background-color:#272822;
-  color: #f5f5f5;
+  color: #f3f3f3;
   font-size: 100%;
 }
 blockquote {
   margin-left: 8pt;
   margin-right: 8pt;
   padding: 12pt;
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
   border-left: double  #ccc 5pt;
 }
 
@@ -113,23 +122,24 @@ table{
   margin-bottom: 12pt;
 }
 td,th{
-  border: solid 1px #aaa;
+  border: solid 1px #008B3F;
   font-size: small;
   padding: 4pt;
 }
 th{
-  background:#ccc;
+  background: #008B3F;
+  color: #fff;
 }
 
 /* Menu */
 .menu {
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
   padding-top: 1px;
   padding-left: 20px;
   padding-bottom: 10px;
 }
 .menu-selected {
-  background-color: lightcoral;
+  background-color: #008B3F;
   color: white;
   text-decoration: none;
 }
@@ -140,9 +150,14 @@ th{
 
 /* footer */
 .footer {
-  border-top:1pt solid #cccccc;
+  border-top:1pt solid #008B3F;
+  background: #008B3F;
+  color: #fff;
   padding-top: 3pt;
   text-align: center;
+}
+.footer a {
+  color: #fff;
 }
 
 
@@ -159,7 +174,7 @@ div.note_content {
     padding-bottom: 5pt;
     display: block;
     color: #444444;
-    background: #e7edfa;
+    background: #f3f3f3;
 }
 div.note_title {
   margin: 0pt;
@@ -167,7 +182,7 @@ div.note_title {
   padding-bottom: 3pt;
   padding-left: 10pt;
   padding-right: 10pt;
-  background: #3d88cf;
+  background: #008B3F;
   font-size: 110%;
   font-weight: 900;
   color: #ffffff;

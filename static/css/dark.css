@@ -2,10 +2,10 @@
 
 /* Base */
 html {
-    font-family:  'メイリオ', '游ゴシック Medium', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'メイリオ', '游ゴシック Medium', 'メイリオ', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: medium;
-    color: #333333;
-    background-color: #fafafa;
+    color: #D4D4D4;
+    background-color: #1E1E1E;
 }
 
 /* content */
@@ -30,43 +30,52 @@ h1 {
   padding-left: 20pt;
   padding-top:  20pt;
   padding-bottom: 10pt;
-  color: #fafafa;
-  background: #333333;
+  color:#D4D4D4;
+  background: #3c3c3c;
+  border-bottom: solid 0px #D4D4D4;
+}
+h1 a {
+  color: #D4D4D4;
 }
 h2 {
   margin-top: 30pt;
   margin-bottom: 8pt;
   font-weight: 900;
   font-size: 190%;
-  border-bottom: solid #333333;
+  border-bottom: solid#D4D4D4;
   border-width: 5pt;
+  color: #D4D4D4;
 }
 h3 {
   margin-top: 20pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 150%;
+  color: #D4D4D4;
 }
 h4 {
   margin-top: 20pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 130%;
+  color: #D4D4D4;
 }
 h5 {
   margin-top: 5pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 100%;
+  color: #D4D4D4;
 }
 h6 {
     margin-top: 0pt;
     margin-bottom: 0pt;
     font-weight: 900;
     font-size: 85%;
+    color: #D4D4D4;
   }
 a {
-  color: #1C90F3;
+  color: #9cdcf0;
 }
 img {
     max-width: 100%;
@@ -75,7 +84,7 @@ img {
 pre {
   padding: 8pt;
   background-color:#272822;
-  color: #f5f5f5;
+  color:  #D4D4D4;
   tab-size:4;
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   line-height: 120%;
@@ -86,7 +95,7 @@ code { /* inline code */
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   padding: 2pt;
   margin-top: 20pt;
-  background-color: #eee;
+  background-color: #3c3c3c;
   font-size: 100%;
   white-space: pre-wrap;
 }
@@ -96,15 +105,15 @@ pre code {
   margin-top: 20pt;
   margin-bottom: 20pt;
   background-color:#272822;
-  color: #f5f5f5;
+  color:  #D4D4D4;
   font-size: 100%;
 }
 blockquote {
   margin-left: 8pt;
   margin-right: 8pt;
   padding: 12pt;
-  background-color: #f5f5f5;
-  border-left: double  #ccc 5pt;
+  background-color:  #3c3c3c;
+  border-left: double  #d4d4d4 5pt;
 }
 
 table{
@@ -113,23 +122,24 @@ table{
   margin-bottom: 12pt;
 }
 td,th{
-  border: solid 1px #aaa;
+  border: solid 1px #D4D4D4;
   font-size: small;
   padding: 4pt;
 }
 th{
-  background:#ccc;
+  background: #3c3c3c;
+  color: #fff;
 }
 
 /* Menu */
 .menu {
-  background-color: #eeeeee;
+  background-color: #3c3c3c;
   padding-top: 1px;
   padding-left: 20px;
   padding-bottom: 10px;
 }
 .menu-selected {
-  background-color: lightcoral;
+  background-color: #272822;
   color: white;
   text-decoration: none;
 }
@@ -140,9 +150,14 @@ th{
 
 /* footer */
 .footer {
-  border-top:1pt solid #cccccc;
+  border-top:0pt solid #D4D4D4;
+  background: #3c3c3c;
+  color:  #D4D4D4;
   padding-top: 3pt;
   text-align: center;
+}
+.footer a {
+  color:  #D4D4D4;
 }
 
 
@@ -158,8 +173,8 @@ div.note_content {
     padding-right: 12pt;
     padding-bottom: 5pt;
     display: block;
-    color: #444444;
-    background: #e7edfa;
+    color: #D4D4D4;
+    background: #272822;
 }
 div.note_title {
   margin: 0pt;
@@ -167,10 +182,10 @@ div.note_title {
   padding-bottom: 3pt;
   padding-left: 10pt;
   padding-right: 10pt;
-  background: #3d88cf;
+  background: #3c3c3c;
   font-size: 110%;
   font-weight: 900;
-  color: #ffffff;
+  color: #D4D4D4;
 }
 div.note li p {
   margin: 0pt;

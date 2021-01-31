@@ -15,7 +15,7 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
     author = "Your Name"
     copyRightYear = "2020"
     isCHM = false
-    # custom_css = ["/css/custom.css"]
+    #custom_css = ["/css/green.css"]
     # custom_js = ["/js/custom.js"]
 
 [languages]
