@@ -70,12 +70,18 @@ namespace UTF8toLocalCodeConverter
       var unknownList = localCodeFallBack.Buffer.UnknownList;
       using (StreamWriter sw = new StreamWriter(logPath, true, utf8))
       {
-        sw.WriteLine(string.Format("[{0}]", inputUTF8Path));
+        if (unknownList.Count > 0)
+        {
+          sw.WriteLine(string.Format("[{0}]", inputUTF8Path));
+        }
         foreach (var one in unknownList)
         {
           sw.WriteLine(string.Format("index {0}: {1} ( {2} )", one.Index, one.Value, one.Code));
         }
-        sw.WriteLine(string.Empty);
+        if (unknownList.Count > 0)
+        {
+          sw.WriteLine(string.Empty);
+        }
         sw.Close();
       }
 

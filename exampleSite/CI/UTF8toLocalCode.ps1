@@ -59,9 +59,15 @@ Get-ChildItem $dir -recurse -include *.hhp, *.html, *.hhc | ForEach-Object {
 }
 
 Write-Output @"
+-------------------------------------------------
 Convertion completed !
 Number of processed files: $($fileNum)
 Number of unknwown chars files: $($unknonwFileNum)
+  * show $($logpath) for details.
+-------------------------------------------------
+
+
+
 "@
 
 Pop-Location
