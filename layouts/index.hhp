@@ -10,21 +10,55 @@ Full-text search=Yes
 Language={{ .Site.Params.helpLanguageCode }}
 
 [WINDOWS]
-WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[300,300,1627,1149],,,,,,,0
+WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x2520,,0x304e,[300,100,1400,900],,,,,,,0
 
 
 [FILES]
 {{- define "hierarchy" }}
 {{- range .Pages }}
+{{- $page := . }}
+{{- if .Params.ShowIf }}
+  {{- $flag := false }}
+  {{- range .Site.Params.showIfs }}
+    {{- $showIf := . }}
+    {{- range $page.Params.ShowIf }}
+      {{- if and (eq $showIf . ) (eq $flag false) }}
+        {{- $flag = true }}
+        {{- if $page.IsPage}}
+{{ $page.RelPermalink }}
+        {{- end }}
+        {{- if $page.IsSection }}{{ template "hierarchy" $page }}{{ end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- else}}
 {{- if .IsPage}}
 {{.RelPermalink}}{{ end }}
 {{- if .IsSection }}{{ template "hierarchy" . }}{{ end }}
-{{- end }}{{- end }}{{ template "hierarchy" .Site.Home }}
+{{- end }}{{- end }}{{- end }}{{ template "hierarchy" .Site.Home }}
 
 
 [ALIAS]
 {{- define "create_alias" }}
 {{- range .Pages -}}
+{{- $page := . }}
+{{- if .Params.ShowIf }}
+  {{- $flag := false }}
+  {{- range .Site.Params.showIfs }}
+    {{- $showIf := . }}
+    {{- range $page.Params.ShowIf }}
+      {{- if and (eq $showIf . ) (eq $flag false) }}
+        {{- $flag = true }}
+        {{- if $page.IsPage}}
+          {{- $id := replace $page.RelPermalink "/" "_" }}
+          {{- $id = replace $id ".html" "" | upper }}
+IDH_{{ $id }}={{ $page.RelPermalink}}
+        {{- end }}
+        {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- else}}
 {{- if .IsPage }}
 {{- $id := replace .RelPermalink "/" "_" }}
 {{- $id = replace $id ".html" "" | upper }}
@@ -32,6 +66,7 @@ IDH_{{ $id }}={{.RelPermalink}}
 {{- end -}}
 {{- if .IsSection -}}
 {{ template "create_alias" . }}
+{{- end -}}
 {{- end -}}
 {{- end -}}
 {{- end -}}

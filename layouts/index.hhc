@@ -7,12 +7,31 @@
 {{- define "hhc_hierarchy" }}
   <UL>
   {{- range .Pages.ByWeight }}
+    {{- $page := . }}
+    {{- if .Params.ShowIf }}
+      {{- $flag := false }}
+      {{- range .Site.Params.showIfs }}
+        {{- $showIf := . }}
+        {{- range $page.Params.ShowIf }}
+          {{- if and (eq $showIf . ) (eq $flag false) }}
+            {{- $flag = true }}
+            <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="{{$page.Title}}">
+            {{- if ne $page.Params.HideHelpTOC true }}
+            <param name="Local" value="{{$page.RelPermalink}}">{{ end }}
+		        </OBJECT>
+            {{- if $page.IsSection }}{{ template "hhc_hierarchy" $page }}{{ end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- else}}
     <LI> <OBJECT type="text/sitemap">
     <param name="Name" value="{{.Title}}">
     {{- if ne .Params.HideHelpTOC true }}
     <param name="Local" value="{{.RelPermalink}}">{{ end }}
 		</OBJECT>
     {{- if .IsSection }}{{ template "hhc_hierarchy" . }}{{ end }}
+    {{- end }}
   {{- end }}
   </UL>
 {{- end }}

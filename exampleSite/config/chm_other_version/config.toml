@@ -1,15 +1,15 @@
 # publish dir "public_(environment)"という名称にします。
 publishDir = "public_chm_other_version"
 
-# content以下の無視するセクション/記事。ヘルプのエディションにより不要になるセクションや記事がある場合に使用。
-ignoreFiles = ["ignore", "content1/child/test"]
+# content以下の無視するセクション/記事。
+#ignoreFiles = ["ignore", "content1/child/test"]
 
 # html以外のファイル類はすべて生成を抑制する
 disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT", "sitemap"]
 
 [params]
-  # ShowIfショートコードで表示するコンテンツの一覧
-  #showIfs = ["supportFuncA"]
+  # ShowIfショートコード/ShowIfフロントマターで表示するコンテンツの一覧
+  showIfs = ["edition1", "edition2", "edition3"]
   isCHM = true
 
 [outputs]
