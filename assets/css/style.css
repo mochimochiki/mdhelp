@@ -4,6 +4,7 @@
 html {
     font-family:  'メイリオ', '游ゴシック Medium', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: medium;
+    line-height: 1.7;
     color: #333333;
     background-color: #fafafa;
 }
@@ -19,12 +20,12 @@ body {
   margin-bottom: 50pt;
 }
 p {
-  margin-top: 0pt;
-  margin-bottom: 12pt;
+  margin-top: 3pt;
+  margin-bottom: 3pt;
 }
 h1 {
-  margin-top: 30pt;
-  margin-bottom: 30pt;
+  margin-top: 24pt;
+  margin-bottom: 18pt;
   font-size: 300%;
   font-weight: 900;
   padding-left: 20pt;
@@ -34,21 +35,21 @@ h1 {
   background: #333333;
 }
 h2 {
-  margin-top: 30pt;
-  margin-bottom: 8pt;
+  margin-top: 36pt;
+  margin-bottom: 6pt;
   font-weight: 900;
-  font-size: 190%;
+  font-size: 180%;
   border-bottom: solid #333333;
   border-width: 5pt;
 }
 h3 {
-  margin-top: 20pt;
-  margin-bottom: 0pt;
+  margin-top: 24pt;
+  margin-bottom: 4pt;
   font-weight: 900;
   font-size: 150%;
 }
 h4 {
-  margin-top: 20pt;
+  margin-top: 15pt;
   margin-bottom: 0pt;
   font-weight: 900;
   font-size: 130%;
@@ -60,7 +61,7 @@ h5 {
   font-size: 100%;
 }
 h6 {
-    margin-top: 0pt;
+    margin-top: 3pt;
     margin-bottom: 0pt;
     font-weight: 900;
     font-size: 85%;
@@ -85,7 +86,7 @@ pre {
 code { /* inline code */
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   padding: 2pt;
-  margin-top: 20pt;
+  margin-top: 10pt;
   background-color: #eee;
   font-size: 100%;
   white-space: pre-wrap;
@@ -93,8 +94,8 @@ code { /* inline code */
 pre code {
   font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
   padding: 0pt;
-  margin-top: 20pt;
-  margin-bottom: 20pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
   background-color:#272822;
   color: #f5f5f5;
   font-size: 100%;
