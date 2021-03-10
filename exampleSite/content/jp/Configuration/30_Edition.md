@@ -27,9 +27,9 @@ weight: 30
 ignoreFiles = ["ignore"]
 ```
 
-### 記事中の特定要素の表示/非表示を切り替える
+### 特定記事・特定要素の表示/非表示を切り替える
 
-[ShowIf](./20_shortcodes.html)ショートコードと共に`showIfs`を使用することで表示/非表示を切り替えます。
+[ShowIf](./20_shortcodes.html)ショートコード/フロントマターと共に`showIfs`を使用することで表示/非表示を切り替えます。
 
 ```toml
 [params]
@@ -42,6 +42,15 @@ ignoreFiles = ["ignore"]
 {{%/* ShowIf supportFuncA */%}}
 ここにsupportFuncAをサポートする場合に表示するコンテンツを記述。
 {{%/* /ShowIf */%}}
+```
+
+記事単位では以下のようにフロントマターを書いている場合にchmに含まれます。一つのエディションだけであってもリスト形式（`["supportFuncA"]`）で書く必要があります。
+
+```
+---
+title: funcAの説明
+ShowIf: ["supportFuncA"]
+---
 ```
 
 ## ビルドする

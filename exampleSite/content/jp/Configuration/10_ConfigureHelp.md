@@ -41,7 +41,7 @@ CHMかどうか。この設定は通常Webサイト用のconfig.tomlでは`false
 
 ### showIfs
 
-`ShowIf`ショートコードで表示する条件の一覧。
+`ShowIf`フロントマター/ショートコードで表示する条件の一覧。
 
 ```
 showIfs = ["supportFuncA", "supportFuncB"]
@@ -54,6 +54,16 @@ showIfs = ["supportFuncA", "supportFuncB"]
 ここにFuncAをサポートする場合に表示するコンテンツを記述。
 {{%/* /ShowIf */%}}
 ```
+
+記事単位では以下のようにフロントマターを書いている場合、その記事はchmに含まれます。一つのエディションだけであってもリスト形式（`["supportFuncA"]`）で書く必要があります。
+
+```
+---
+title: funcAの説明
+ShowIf: ["supportFuncA"]
+---
+```
+
 
 本設定について詳しくは[エディション](./30_Edition.html)を参照してください。
 
