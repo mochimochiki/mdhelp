@@ -2,7 +2,8 @@ publishDir = "../docs"
 ignoreFiles = ["ignore"]
 [params]
     author = "mochimo"
-    copyRightYear = "2020"
+    copyRightFromYear = "2020"
+    outputCopyRightToYear = true # trueにするとビルド日をベースに FromYear - toYear とコピーライトを出力します
 [languages]
   [languages.jp]
     baseURL = "https://mochimochiki.github.io/mdhelp/jp/"

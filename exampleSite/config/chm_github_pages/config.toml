@@ -13,7 +13,8 @@ disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT
   showIfs = ["supportFuncA"]
   isCHM = true
   author = "mochimo"
-  copyRightYear = "2020"
+  copyRightFromYear = "2020"
+  outputCopyRightToYear = true # trueにするとビルド日をベースに FromYear - toYear とコピーライトを出力します
 
 [outputs]
   home = [ "HTML", "HHC", "HHP", "MAPTEMP"] # hhc/hhp/maptemplateも生成

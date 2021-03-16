@@ -24,16 +24,13 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
     {{- range $page.Params.ShowIf }}
       {{- if and (eq $showIf . ) (eq $flag false) }}
         {{- $flag = true }}
-        {{- if $page.IsPage}}
 {{ $page.RelPermalink }}
-        {{- end }}
         {{- if $page.IsSection }}{{ template "hierarchy" $page }}{{ end }}
       {{- end }}
     {{- end }}
   {{- end }}
 {{- else}}
-{{- if .IsPage}}
-{{.RelPermalink}}{{ end }}
+{{.RelPermalink}}
 {{- if .IsSection }}{{ template "hierarchy" . }}{{ end }}
 {{- end }}{{- end }}{{- end }}{{ template "hierarchy" .Site.Home }}
 
@@ -49,21 +46,17 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
     {{- range $page.Params.ShowIf }}
       {{- if and (eq $showIf . ) (eq $flag false) }}
         {{- $flag = true }}
-        {{- if $page.IsPage}}
-          {{- $id := replace $page.RelPermalink "/" "_" }}
-          {{- $id = replace $id ".html" "" | upper }}
+        {{- $id := replace $page.RelPermalink "/" "_" }}
+        {{- $id = replace $id ".html" "" | upper }}
 IDH_{{ $id }}={{ $page.RelPermalink}}
-        {{- end }}
         {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
       {{- end }}
     {{- end }}
   {{- end }}
 {{- else}}
-{{- if .IsPage }}
 {{- $id := replace .RelPermalink "/" "_" }}
 {{- $id = replace $id ".html" "" | upper }}
 IDH_{{ $id }}={{.RelPermalink}}
-{{- end -}}
 {{- if .IsSection -}}
 {{ template "create_alias" . }}
 {{- end -}}

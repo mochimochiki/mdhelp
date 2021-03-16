@@ -13,9 +13,10 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
 
 [params]
     author = "Your Name"
-    copyRightYear = "2020"
+    copyRightFromYear = "2020"
+    outputCopyRightToYear = true # trueにするとビルド日をベースに FromYear - toYear とコピーライトを出力します
     isCHM = false
-    #custom_css = ["/css/green.css"]
+    # custom_css = ["/css/custom.css"]
     # custom_js = ["/js/custom.js"]
 
 [languages]
