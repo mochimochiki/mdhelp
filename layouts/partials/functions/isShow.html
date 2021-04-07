@@ -1,0 +1,35 @@
+{{/* Return whether to display page / section  */}}
+
+{{ $page := . }}
+{{ $ret := false }}
+
+{{ if $page.Params.ShowIf }}
+  {{ range .Site.Params.showIfs }}
+    {{ $showIf := . }}
+
+    {{ if eq $showIf "@all-pages" }}
+      {{ $ret = true }}
+    {{ end }}
+
+    {{ range $page.Params.ShowIf }}
+      {{ if eq $showIf . }}
+        {{ $ret = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $ret = true }}
+{{ end }}
+
+{{ if $page.Params.HideIf }}
+  {{ range .Site.Params.showIfs }}
+    {{ $hideIf := . }}
+    {{ range $page.Params.HideIf }}
+      {{ if eq $hideIf . }}
+        {{ $ret = false }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $ret }}

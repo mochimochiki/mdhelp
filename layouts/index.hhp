@@ -15,55 +15,30 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
 
 [FILES]
 {{- define "hierarchy" }}
-{{- range .Pages }}
-{{- $page := . }}
-{{- if .Params.ShowIf }}
-  {{- $flag := false }}
-  {{- range .Site.Params.showIfs }}
-    {{- $showIf := . }}
-    {{- range $page.Params.ShowIf }}
-      {{- if and (eq $showIf . ) (eq $flag false) }}
-        {{- $flag = true }}
+  {{- range .Pages }}
+    {{- $page := . }}
+    {{- if partial "functions/isShow" . }}
 {{ $page.RelPermalink }}
-        {{- if $page.IsSection }}{{ template "hierarchy" $page }}{{ end }}
-      {{- end }}
+      {{- if $page.IsSection }}{{ template "hierarchy" $page }}{{ end }}
     {{- end }}
   {{- end }}
-{{- else}}
-{{.RelPermalink}}
-{{- if .IsSection }}{{ template "hierarchy" . }}{{ end }}
-{{- end }}{{- end }}{{- end }}{{ template "hierarchy" .Site.Home }}
+{{- end }}
+{{- template "hierarchy" .Site.Home }}
 
 
 [ALIAS]
 {{- define "create_alias" }}
-{{- range .Pages -}}
-{{- $page := . }}
-{{- if .Params.ShowIf }}
-  {{- $flag := false }}
-  {{- range .Site.Params.showIfs }}
-    {{- $showIf := . }}
-    {{- range $page.Params.ShowIf }}
-      {{- if and (eq $showIf . ) (eq $flag false) }}
-        {{- $flag = true }}
-        {{- $id := replace $page.RelPermalink "/" "_" }}
-        {{- $id = replace $id ".html" "" | upper }}
+  {{- range .Pages -}}
+    {{- $page := . }}
+    {{- if partial "functions/isShow" . }}
+      {{- $id := replace $page.RelPermalink "/" "_" }}
+      {{- $id = replace $id ".html" "" | upper }}
 IDH_{{ $id }}={{ $page.RelPermalink}}
-        {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
-      {{- end }}
+      {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
     {{- end }}
   {{- end }}
-{{- else}}
-{{- $id := replace .RelPermalink "/" "_" }}
-{{- $id = replace $id ".html" "" | upper }}
-IDH_{{ $id }}={{.RelPermalink}}
-{{- if .IsSection -}}
-{{ template "create_alias" . }}
-{{- end -}}
-{{- end -}}
-{{- end -}}
-{{- end -}}
-{{ template "create_alias" .Site.Home }}
+{{- end }}
+{{- template "create_alias" .Site.Home }}
 
 [MAP]
 #include Map.h
