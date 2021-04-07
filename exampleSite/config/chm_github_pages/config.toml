@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "taxonomyTerm", "category", "RSS", "404", "robotsTXT
 
 [params]
   # ShowIfショートコードで表示するコンテンツの一覧
-  showIfs = ["supportFuncA"]
+  showIfs = ["editionA"]
   isCHM = true
   author = "mochimo"
   copyRightFromYear = "2020"
