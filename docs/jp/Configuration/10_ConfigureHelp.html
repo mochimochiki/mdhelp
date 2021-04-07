@@ -45,10 +45,10 @@
 <p>独自のjavascriptを利用する場合に設定します。例えば<code>/static/js/custom.js</code>にjsファイルを配置した場合、<code>custom_js = [&quot;/js/custom.js&quot;]</code>とするとjavascriptが適用されます。</p>
 <h3 id="showifs">showIfs</h3>
 <p><code>ShowIf</code>ショートコードで表示する条件の一覧。</p>
-<pre><code>showIfs = [&quot;supportFuncA&quot;, &quot;supportFuncB&quot;]
+<pre><code>showIfs = [&quot;editionA&quot;, &quot;supportFuncB&quot;]
 </code></pre><p>例えば上記のように設定した場合、<code>.md</code>ファイルで以下のブロックは表示されます。</p>
-<pre><code>{{% ShowIf supportFuncA %}}
-ここにFuncAをサポートする場合に表示するコンテンツを記述。
+<pre><code>{{% ShowIf editionA %}}
+ここにeditionAをサポートする場合に表示するコンテンツを記述。
 {{% /ShowIf %}}
 </code></pre><p>本設定について詳しくは<a href="./30_Edition.html">エディション</a>を参照してください。</p>
 <h2 id="configlanguages">Config.languages</h2>

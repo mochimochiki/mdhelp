@@ -7,12 +7,24 @@ mdhelpテーマで使用できるショートコードの一覧です。これ�
 
 ## ShowIf
 
-`config.toml`の`showIfs`で列挙されている場合に描画する部分を指定します。以下は`showIfs = ["supportFuncA"]`とした場合に描画されるブロックです。
+`config.toml`の`showIfs`で列挙されている場合に描画する部分を指定します。以下は`showIfs = ["editionA"]`とした場合に描画されるブロックです。
 
 ```
-{{%/* ShowIf supportFuncA */%}}
+{{%/* ShowIf editionA */%}}
 ここにxxxをサポートする場合に表示するコンテンツを記述。
 {{%/* /ShowIf */%}}
+```
+
+[構成](./10_ConfigureHelp.html#showIfs)も参照してください。
+
+## HideIf
+
+`config.toml`の`showIfs`で列挙されている場合に描画「しない」部分を指定します。
+
+```
+{{%/* HideIf editionA */%}}
+ここはeditionAでは表示したくない。
+{{%/* /HideIf */%}}
 ```
 
 [構成](./10_ConfigureHelp.html#showIfs)も参照してください。

@@ -19,37 +19,37 @@ weight: 30
     title = "other"
 ```
 
-### ディレクトリ/ファイルの構成
-
-`ignoreFiles`にリストアップしたディレクトリおよびファイルはビルド対象になりません。エディションによって不要な記事やディレクトリがある場合に設定します。
-
-```
-ignoreFiles = ["ignore"]
-```
-
 ### 特定記事・特定要素の表示/非表示を切り替える
 
-[ShowIf](./20_shortcodes.html)ショートコード/フロントマターと共に`showIfs`を使用することで表示/非表示を切り替えます。
+[ShowIf](./20_shortcodes.html),[HideIf](./20_shortcodes.html)ショートコード/フロントマターと共に`showIfs`を使用することで表示/非表示を切り替えます。
 
 ```toml
 [params]
-  showIfs = ["supportFuncA"]
+  showIfs = ["editionA"]
 ```
 
 この場合、`.md`の記事で以下のように記載した要素が表示されます。
 
 ```
-{{%/* ShowIf supportFuncA */%}}
-ここにsupportFuncAをサポートする場合に表示するコンテンツを記述。
+{{%/* ShowIf editionA */%}}
+ここにeditionAをサポートする場合に表示するコンテンツを記述。
 {{%/* /ShowIf */%}}
 ```
 
-記事単位では以下のようにフロントマターを書いている場合にchmに含まれます。一つのエディションだけであってもリスト形式（`["supportFuncA"]`）で書く必要があります。
+以下のように記載し作用素は表示されません。
+
+```
+{{%/* HideIf editionA */%}}
+ここにeditionAの場合に非表示とするコンテンツ。
+{{%/* /HideIf */%}}
+```
+
+記事単位では以下のようにフロントマターを書いている場合にchmに含まれます。一つのエディションだけであってもリスト形式（`["editionA"]`）で書く必要があります。`HideIf`も同様です。
 
 ```
 ---
-title: funcAの説明
-ShowIf: ["supportFuncA"]
+title: editionAの説明
+ShowIf: ["editionA"]
 ---
 ```
 

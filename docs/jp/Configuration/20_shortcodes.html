@@ -27,8 +27,8 @@
   <h1>ショートコード</h1>
   <p>mdhelpテーマで使用できるショートコードの一覧です。これらはビルドされる HTML Help に対しても有効です。</p>
 <h2 id="showif">ShowIf</h2>
-<p><code>config.toml</code>の<code>showIfs</code>で列挙されている場合に描画する部分を指定します。以下は<code>showIfs = [&quot;supportFuncA&quot;]</code>とした場合に描画されるブロックです。</p>
-<pre><code>{{% ShowIf supportFuncA %}}
+<p><code>config.toml</code>の<code>showIfs</code>で列挙されている場合に描画する部分を指定します。以下は<code>showIfs = [&quot;editionA&quot;]</code>とした場合に描画されるブロックです。</p>
+<pre><code>{{% ShowIf editionA %}}
 ここにxxxをサポートする場合に表示するコンテンツを記述。
 {{% /ShowIf %}}
 </code></pre><p><a href="./10_ConfigureHelp.html#showIfs">構成</a>も参照してください。</p>
