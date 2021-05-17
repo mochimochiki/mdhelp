@@ -9,13 +9,15 @@
   {{- range .Pages.ByWeight }}
     {{- $page := . }}
     {{- if partial "functions/isShow" . }}
+      {{- if .OutputFormats.Get "html" }}
     <LI> <OBJECT type="text/sitemap">
     <param name="Name" value="{{$page.Title}}">
-      {{- if ne $page.Params.HideHelpTOC true }}
+        {{- if ne $page.Params.HideHelpTOC true }}
     <param name="Local" value="{{$page.RelPermalink}}">
-      {{- end }}
+        {{- end }}
 		</OBJECT>
         {{- if $page.IsSection }}{{ template "hhc_hierarchy" $page }}{{ end }}
+      {{- end }}
     {{- end }}
   {{- end }}
   </UL>

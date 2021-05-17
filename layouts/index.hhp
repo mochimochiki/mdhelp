@@ -18,7 +18,9 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
   {{- range .Pages }}
     {{- $page := . }}
     {{- if partial "functions/isShow" . }}
+      {{- if .OutputFormats.Get "html" }}
 {{ $page.RelPermalink }}
+      {{- end }}
       {{- if $page.IsSection }}{{ template "hierarchy" $page }}{{ end }}
     {{- end }}
   {{- end }}
@@ -31,10 +33,12 @@ WindowSettings="{{ .Site.Title }}","toc.hhc",,"index.html","index.html",,,,,0x25
   {{- range .Pages -}}
     {{- $page := . }}
     {{- if partial "functions/isShow" . }}
-      {{- $id := replace $page.RelPermalink "/" "_" }}
-      {{- $id = replace $id ".html" "" | upper }}
+      {{- if .OutputFormats.Get "html" }}
+        {{- $id := replace $page.RelPermalink "/" "_" }}
+        {{- $id = replace $id ".html" "" | upper }}
 IDH_{{ $id }}={{ $page.RelPermalink}}
-      {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
+        {{- if $page.IsSection }}{{ template "create_alias" $page }}{{ end }}
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
