@@ -167,25 +167,23 @@ div.note {
   margin-bottom: 20pt;
 }
 div.note_content {
-    margin: 0pt;
-    padding-top: 12pt;
-    padding-left: 12pt;
-    padding-right: 12pt;
-    padding-bottom: 5pt;
-    display: block;
-    color: #444444;
-    background: #e7edfa;
+  margin: 0pt;
+  padding-top: 4pt;
+  padding-left: 12pt;
+  padding-right: 12pt;
+  padding-bottom: 5pt;
+  display: block;
+  background: #eee;
 }
 div.note_title {
   margin: 0pt;
-  padding-top: 3pt;
+  padding-top: 5pt;
   padding-bottom: 3pt;
   padding-left: 10pt;
   padding-right: 10pt;
-  background: #3d88cf;
+  background: #bbb;
   font-size: 110%;
   font-weight: 900;
-  color: #ffffff;
 }
 div.note li p {
   margin: 0pt;
