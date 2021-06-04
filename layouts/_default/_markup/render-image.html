@@ -1,0 +1,13 @@
+{{- $url := .Destination | safeURL | urls.Parse }}
+{{- $querys := split $url.RawQuery "&"}}
+{{- if .PlainText }}
+<figure>
+  <div>
+  <img src="{{ $url.Path }}" alt="{{ .PlainText }}" {{ with .PlainText }} class="fig" {{ end }} {{ range $querys }}{{
+    (printf "%s" .) | safeHTMLAttr }}{{ end }}>
+  </div>
+  {{ with .PlainText }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else }}
+<img src="{{ $url.Path }}" alt="{{ .PlainText }}" {{ range $querys }}{{ (printf "%s" .) | safeHTMLAttr }}{{ end }}>
+{{- end }}
