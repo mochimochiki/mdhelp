@@ -11,19 +11,20 @@
   <body><nav class="menu">
   <h2>MENU</h2>
   <ul>
-    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
-    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/GettingStarted.html" id="" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" id="" class="">ヘルプの構成</a>
   <ul>
-    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="menu-selected">ヘルプの構成</a>
-    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" class="">HTML Helpの構成ファイル</a>
-    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
-    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
-    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" id="menu-selected" class="menu-selected">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" id="" class="">HTML Helpの構成ファイル</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" id="" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" id="" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" id="" class="">CIでヘルプを自動ビルドする</a>
   </ul>
+    <li><a href="/mdhelp/jp/content1.html" id="" class="">Content1s</a>
   </ul>
 </nav>
 
-    <div id="content">
+<div id="content">
   <h1>ヘルプの構成</h1>
   <p>ヘルプを構成するための<code>config.toml</code>の主な項目の説明をします。<a href="https://gohugo.io/getting-started/configuration/">HUGO公式ドキュメント</a>も合わせて参照してください。</p>
 <h2 id="config">Config</h2>
@@ -44,12 +45,24 @@
 <h3 id="custom_js">custom_js</h3>
 <p>独自のjavascriptを利用する場合に設定します。例えば<code>/static/js/custom.js</code>にjsファイルを配置した場合、<code>custom_js = [&quot;/js/custom.js&quot;]</code>とするとjavascriptが適用されます。</p>
 <h3 id="showifs">showIfs</h3>
-<p><code>ShowIf</code>ショートコードで表示する条件の一覧。</p>
-<pre><code>showIfs = [&quot;editionA&quot;, &quot;supportFuncB&quot;]
+<p><code>ShowIf</code>/<code>HideIf</code>フロントマター/ショートコードで表示する条件の一覧。</p>
+<pre><code>showIfs = [&quot;editionA&quot;, &quot;editionB&quot;]
 </code></pre><p>例えば上記のように設定した場合、<code>.md</code>ファイルで以下のブロックは表示されます。</p>
 <pre><code>{{% ShowIf editionA %}}
-ここにeditionAをサポートする場合に表示するコンテンツを記述。
+ここにeditionAの場合に表示するコンテンツを記述。
 {{% /ShowIf %}}
+</code></pre><p>以下のブロックは表示されません。</p>
+<pre><code>{{% HideIf editionA %}}
+ここはeditionAのみ非表示とする。
+{{% /HideIf %}}
+</code></pre><p>記事単位では以下のようにフロントマターを書いている場合、その記事はchmに含まれます。一つのエディションだけであってもリスト形式（<code>[&quot;editionA&quot;]</code>）で書く必要があります。</p>
+<pre><code>---
+title: editionAの説明
+ShowIf: [&quot;editionA&quot;]
+---
+</code></pre><pre><code>---
+title: editionA以外はこの説明
+HideIf: [&quot;editionA&quot;]
 </code></pre><p>本設定について詳しくは<a href="./30_Edition.html">エディション</a>を参照してください。</p>
 <h2 id="configlanguages">Config.languages</h2>
 <p>[languages] - [languages.jp] などに設定する設定値です。</p>
@@ -64,7 +77,7 @@
 
     </div><div class="footer">
   <p class="copyright">
-    &copy; 2020 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
+    &copy; 2020 - 2021 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
   </p>
 </div>
 </body>

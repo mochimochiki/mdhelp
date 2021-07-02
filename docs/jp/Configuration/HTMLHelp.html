@@ -11,40 +11,41 @@
   <body><nav class="menu">
   <h2>MENU</h2>
   <ul>
-    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
-    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/GettingStarted.html" id="" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" id="" class="">ヘルプの構成</a>
   <ul>
-    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
-    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" class="menu-selected">HTML Helpの構成ファイル</a>
-    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
-    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
-    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" id="" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" id="menu-selected" class="menu-selected">HTML Helpの構成ファイル</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" id="" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" id="" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" id="" class="">CIでヘルプを自動ビルドする</a>
   </ul>
+    <li><a href="/mdhelp/jp/content1.html" id="" class="">Content1s</a>
   </ul>
 </nav>
 
-    <div id="content">
+<div id="content">
   <h1>HTML Helpの構成ファイル</h1>
   <p>HTML Help をビルドするには以下のような構成ファイルが必要です。</p>
 <table>
 <thead>
 <tr>
-<th align="left">ファイル</th>
-<th align="left">説明</th>
+<th style="text-align:left">ファイル</th>
+<th style="text-align:left">説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">project.hhp</td>
-<td align="left">ヘルプのプロジェクトファイル。オプションなどを定義。</td>
+<td style="text-align:left">project.hhp</td>
+<td style="text-align:left">ヘルプのプロジェクトファイル。オプションなどを定義。</td>
 </tr>
 <tr>
-<td align="left">toc.hhc</td>
-<td align="left">目次定義ファイル</td>
+<td style="text-align:left">toc.hhc</td>
+<td style="text-align:left">目次定義ファイル</td>
 </tr>
 <tr>
-<td align="left">Map.h</td>
-<td align="left">HelpID定義ファイル。</td>
+<td style="text-align:left">Map.h</td>
+<td style="text-align:left">HelpID定義ファイル。</td>
 </tr>
 </tbody>
 </table>
@@ -54,7 +55,7 @@
 <div class="note">
   <div class="note_title">Note</div>
   <div class="note_content">
-<p>この作業はページが増えた際にも必要になります。増えたページのID分を<code>/static/Map.h</code>に足します。</p>
+  この作業はページが増えた際にも必要になります。増えたページのID分を<code>/static/Map.h</code>に足します。
   </div>
 </div>
 <h2 id="projecthhp-をカスタマイズする">project.hhp をカスタマイズする</h2>
@@ -63,7 +64,7 @@
 
     </div><div class="footer">
   <p class="copyright">
-    &copy; 2020 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
+    &copy; 2020 - 2021 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
   </p>
 </div>
 </body>

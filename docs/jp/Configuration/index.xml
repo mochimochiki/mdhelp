@@ -5,11 +5,7 @@
     <link>https://mochimochiki.github.io/mdhelp/jp/Configuration.html</link>
     <description>Recent content in ヘルプの構成 on mdhelp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    
-	<atom:link href="https://mochimochiki.github.io/mdhelp/jp/Configuration/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>ja-jp</language><atom:link href="https://mochimochiki.github.io/mdhelp/jp/Configuration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ヘルプの構成</title>
       <link>https://mochimochiki.github.io/mdhelp/jp/Configuration/10_ConfigureHelp.html</link>

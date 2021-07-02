@@ -11,19 +11,20 @@
   <body><nav class="menu">
   <h2>MENU</h2>
   <ul>
-    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
-    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/GettingStarted.html" id="" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" id="" class="">ヘルプの構成</a>
   <ul>
-    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
-    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" class="">HTML Helpの構成ファイル</a>
-    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="menu-selected">ショートコード</a>
-    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
-    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="">CIでヘルプを自動ビルドする</a>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" id="" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" id="" class="">HTML Helpの構成ファイル</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" id="menu-selected" class="menu-selected">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" id="" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" id="" class="">CIでヘルプを自動ビルドする</a>
   </ul>
+    <li><a href="/mdhelp/jp/content1.html" id="" class="">Content1s</a>
   </ul>
 </nav>
 
-    <div id="content">
+<div id="content">
   <h1>ショートコード</h1>
   <p>mdhelpテーマで使用できるショートコードの一覧です。これらはビルドされる HTML Help に対しても有効です。</p>
 <h2 id="showif">ShowIf</h2>
@@ -31,6 +32,12 @@
 <pre><code>{{% ShowIf editionA %}}
 ここにxxxをサポートする場合に表示するコンテンツを記述。
 {{% /ShowIf %}}
+</code></pre><p><a href="./10_ConfigureHelp.html#showIfs">構成</a>も参照してください。</p>
+<h2 id="hideif">HideIf</h2>
+<p><code>config.toml</code>の<code>showIfs</code>で列挙されている場合に描画「しない」部分を指定します。</p>
+<pre><code>{{% HideIf editionA %}}
+ここはeditionAでは表示したくない。
+{{% /HideIf %}}
 </code></pre><p><a href="./10_ConfigureHelp.html#showIfs">構成</a>も参照してください。</p>
 <h2 id="note">note</h2>
 <p>注記です。以下のように<code>note</code>ショートコードで囲まれた部分が注記としてレンダリングされます。</p>
@@ -40,7 +47,7 @@
 </code></pre><div class="note">
   <div class="note_title">Note</div>
   <div class="note_content">
-<p>ここに注記文章を記載</p>
+  ここに注記文章を記載
   </div>
 </div>
 <p><code>note (title)</code>と言う形式で、引数にタイトルを指定することもできます。note内部にMarkdownを書くことも可能です。</p>
@@ -54,25 +61,114 @@
 </code></pre><div class="note">
   <div class="note_title">注記</div>
   <div class="note_content">
-<p>ここに注記文章を記載</p>
+  <p>ここに注記文章を記載</p>
 <ul>
-<li>
-<p>markdownも記載可能</p>
+<li>markdownも記載可能
 <ul>
 <li>箇条書きレベル2</li>
 </ul>
 </li>
-<li>
-<p>箇条書きレベル1</p>
-</div>
-</li>
+<li>箇条書きレベル1</li>
 </ul>
+  </div>
 </div>
+<h2 id="include">include</h2>
+<h3 id="高度な表をincludeするセル結合markdown幅指定ヘッダー有無指定">高度な表をincludeする（セル結合/Markdown/幅指定/ヘッダー有無指定）</h3>
+<p>csvファイルのincludeでは、Markdownよりも高度な表を描画することができます。</p>
+<p>
+<figure>
+  <div>
+  <img src="assets/2021-06-05-00-09-41.png" alt="rich.csv"  class="fig"  width=50%border=5>
+  </div>
+  <figcaption>rich.csv</figcaption>
+</figure>
+</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span>&lt; include 
+      src<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./rich.csv&#34;</span> <span style="color:#75715e"># sourceファイルのパス</span>
+      class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gray&#34;</span>      <span style="color:#75715e"># tableに付加するclass属性。未指定/simple/gray</span>
+      markdown<span style="color:#f92672">=</span>true     <span style="color:#75715e"># trueにした場合表内部のMarkdownをレンダリング。初期値false</span>
+      merge<span style="color:#f92672">=</span>true        <span style="color:#75715e"># trueにした場合空セルを上のセルで結合。初期値false</span>
+      head<span style="color:#f92672">=</span>true         <span style="color:#75715e"># trueにした場合1行目をヘッダーとみなす。初期値true</span>
+      width<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;90%&#34;</span>       <span style="color:#75715e"># tableのwidth属性を設定。</span>
+      width-ratio<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5%-10%-70%-15%&#34;</span> <span style="color:#75715e"># tableの列幅の比率を-区切りで指定。&#34;*&#34;はauto。</span>
+&gt;<span style="color:#f92672">}}</span> 
+</code></pre></div>
+  
+  <table class="gray" width="90%">
+    <tbody>
+      <tr>
+          <th style="text-align: left; width: 5%;">id</th>
+          <th style="text-align: left; width: 10%;">カテゴリ</th>
+          <th style="text-align: left; width: 70%;">名称</th>
+          <th style="text-align: left; width: 15%;">備考</th>
+      </tr>
+      <tr>
+            
+          <td rowspan="1">001</td>
+            
+          <td rowspan="3">果物</td>
+            
+          <td rowspan="1">りんご</td>
+            
+          <td rowspan="1"><img src="assets/Apple.png" alt="" ></td>
+      </tr>
+      <tr>
+            
+          <td rowspan="1">002</td>
+            
+            
+          <td rowspan="1">みかん</td>
+            
+          <td rowspan="1"><ul>
+<li>せとか</li>
+<li>甘平</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+            
+          <td rowspan="1">003</td>
+            
+            
+          <td rowspan="1">ぶどう</td>
+            
+          <td rowspan="1">巨峰</td>
+      </tr>
+      <tr>
+            
+          <td rowspan="1">004</td>
+            
+          <td rowspan="2">お菓子</td>
+            
+          <td rowspan="1">ポテトチップス</td>
+            
+          <td rowspan="1"><ul>
+<li>うすしお</li>
+<li>のりしお</li>
+</ul>
+</td>
+      </tr>
+      <tr>
+            
+          <td rowspan="1">005</td>
+            
+            
+          <td rowspan="1">飴</td>
+            
+          <td rowspan="1"><ul>
+<li>みかん</li>
+<li>ぶどう</li>
+</ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
 
 
     </div><div class="footer">
   <p class="copyright">
-    &copy; 2020 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
+    &copy; 2020 - 2021 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
   </p>
 </div>
 </body>

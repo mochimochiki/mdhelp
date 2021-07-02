@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/* Base */
+html {
+    font-family: 'メイリオ', '游ゴシック Medium', 'メイリオ', 'Source Sans Pro', 'Lato', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: medium;
+    color: #D4D4D4;
+    background-color: #1E1E1E;
+}
+
+/* content */
+body {
+  width: 90%;
+  min-width: 300pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content {
+  margin-bottom: 50pt;
+}
+p {
+  margin-top: 0pt;
+  margin-bottom: 12pt;
+}
+h1 {
+  margin-top: 30pt;
+  margin-bottom: 30pt;
+  font-size: 300%;
+  font-weight: 900;
+  padding-left: 20pt;
+  padding-top:  20pt;
+  padding-bottom: 10pt;
+  color:#D4D4D4;
+  background: #3c3c3c;
+  border-bottom: solid 0px #D4D4D4;
+}
+h1 a {
+  color: #D4D4D4;
+}
+h2 {
+  margin-top: 30pt;
+  margin-bottom: 8pt;
+  font-weight: 900;
+  font-size: 190%;
+  border-bottom: solid#D4D4D4;
+  border-width: 5pt;
+  color: #D4D4D4;
+}
+h3 {
+  margin-top: 20pt;
+  margin-bottom: 0pt;
+  font-weight: 900;
+  font-size: 150%;
+  color: #D4D4D4;
+}
+h4 {
+  margin-top: 20pt;
+  margin-bottom: 0pt;
+  font-weight: 900;
+  font-size: 130%;
+  color: #D4D4D4;
+}
+h5 {
+  margin-top: 5pt;
+  margin-bottom: 0pt;
+  font-weight: 900;
+  font-size: 100%;
+  color: #D4D4D4;
+}
+h6 {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+    font-weight: 900;
+    font-size: 85%;
+    color: #D4D4D4;
+  }
+a {
+  color: #9cdcf0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+pre {
+  padding: 8pt;
+  background-color:#272822;
+  color:  #D4D4D4;
+  tab-size:4;
+  font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
+  line-height: 120%;
+  font-size: 100%;
+  white-space: pre-wrap;
+}
+code { /* inline code */
+  font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
+  padding: 2pt;
+  margin-top: 20pt;
+  background-color: #3c3c3c;
+  font-size: 100%;
+  white-space: pre-wrap;
+}
+pre code {
+  font-family: 'Consolas', 'メイリオ', 'MSゴシック', monospace, sans-serif;
+  padding: 0pt;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  background-color:#272822;
+  color:  #D4D4D4;
+  font-size: 100%;
+}
+blockquote {
+  margin-left: 8pt;
+  margin-right: 8pt;
+  padding: 12pt;
+  background-color:  #3c3c3c;
+  border-left: double  #d4d4d4 5pt;
+}
+
+table{
+  border-collapse:collapse;
+  margin-top: 12pt;
+  margin-bottom: 12pt;
+}
+td,th{
+  border: solid 1px #D4D4D4;
+  font-size: small;
+  padding: 4pt;
+}
+th{
+  background: #3c3c3c;
+  color: #fff;
+}
+
+/* Menu */
+.menu {
+  background-color: #3c3c3c;
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.menu-selected {
+  background-color: #272822;
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #333333;
+}
+
+/* footer */
+.footer {
+  border-top:0pt solid #D4D4D4;
+  background: #3c3c3c;
+  color:  #D4D4D4;
+  padding-top: 3pt;
+  text-align: center;
+}
+.footer a {
+  color:  #D4D4D4;
+}
+
+
+/* note */
+div.note {
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+}
+div.note_content {
+    margin: 0pt;
+    padding-top: 12pt;
+    padding-left: 12pt;
+    padding-right: 12pt;
+    padding-bottom: 5pt;
+    display: block;
+    color: #D4D4D4;
+    background: #272822;
+}
+div.note_title {
+  margin: 0pt;
+  padding-top: 3pt;
+  padding-bottom: 3pt;
+  padding-left: 10pt;
+  padding-right: 10pt;
+  background: #3c3c3c;
+  font-size: 110%;
+  font-weight: 900;
+  color: #D4D4D4;
+}
+div.note li p {
+  margin: 0pt;
+}
+
+/* smart phone */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: medium;
+  }
+  body {
+    width: 90%;
+    min-width: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+ }

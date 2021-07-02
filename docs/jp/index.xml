@@ -5,11 +5,7 @@
     <link>https://mochimochiki.github.io/mdhelp/jp/</link>
     <description>Recent content in MDHELP on mdhelp</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    
-	<atom:link href="https://mochimochiki.github.io/mdhelp/jp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>ja-jp</language><atom:link href="https://mochimochiki.github.io/mdhelp/jp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started</title>
       <link>https://mochimochiki.github.io/mdhelp/jp/GettingStarted/GettingStarted.html</link>
@@ -38,6 +34,15 @@
     </item>
     
     <item>
+      <title>content1_page1</title>
+      <link>https://mochimochiki.github.io/mdhelp/jp/content1/test.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mochimochiki.github.io/mdhelp/jp/content1/test.html</guid>
+      <description>Test content1 ページです。 include test この文書はincludeされています。 Note 注記もincludeできます</description>
+    </item>
+    
+    <item>
       <title>ショートコード</title>
       <link>https://mochimochiki.github.io/mdhelp/jp/Configuration/20_shortcodes.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -62,6 +67,15 @@
       
       <guid>https://mochimochiki.github.io/mdhelp/jp/Configuration/40_CI.html</guid>
       <description>CI環境からヘルプをビルドする際に利用できる情報を説明します。 ビルド CI環境からはbuild.batをエディションの引数付きで呼んでください</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mochimochiki.github.io/mdhelp/jp/_include/test.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mochimochiki.github.io/mdhelp/jp/_include/test.html</guid>
+      <description>include test この文書はincludeされています。 Note 注記もincludeできます</description>
     </item>
     
   </channel>

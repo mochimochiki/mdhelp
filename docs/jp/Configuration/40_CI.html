@@ -11,19 +11,20 @@
   <body><nav class="menu">
   <h2>MENU</h2>
   <ul>
-    <li><a href="/mdhelp/jp/GettingStarted.html" class="">Getting Started</a>
-    <li><a href="/mdhelp/jp/Configuration.html" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/GettingStarted.html" id="" class="">Getting Started</a>
+    <li><a href="/mdhelp/jp/Configuration.html" id="" class="">ヘルプの構成</a>
   <ul>
-    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" class="">ヘルプの構成</a>
-    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" class="">HTML Helpの構成ファイル</a>
-    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" class="">ショートコード</a>
-    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" class="">エディション</a>
-    <li><a href="/mdhelp/jp/Configuration/40_CI.html" class="menu-selected">CIでヘルプを自動ビルドする</a>
+    <li><a href="/mdhelp/jp/Configuration/10_ConfigureHelp.html" id="" class="">ヘルプの構成</a>
+    <li><a href="/mdhelp/jp/Configuration/HTMLHelp.html" id="" class="">HTML Helpの構成ファイル</a>
+    <li><a href="/mdhelp/jp/Configuration/20_shortcodes.html" id="" class="">ショートコード</a>
+    <li><a href="/mdhelp/jp/Configuration/30_Edition.html" id="" class="">エディション</a>
+    <li><a href="/mdhelp/jp/Configuration/40_CI.html" id="menu-selected" class="menu-selected">CIでヘルプを自動ビルドする</a>
   </ul>
+    <li><a href="/mdhelp/jp/content1.html" id="" class="">Content1s</a>
   </ul>
 </nav>
 
-    <div id="content">
+<div id="content">
   <h1>CIでヘルプを自動ビルドする</h1>
   <p>CI環境からヘルプをビルドする際に利用できる情報を説明します。</p>
 <h3 id="ビルド">ビルド</h3>
@@ -42,7 +43,7 @@
 </code></pre><h3 id="utf8からsjisに変換できない文字のリスト">UTF8からSJISに変換できない文字のリスト</h3>
 <p>HUGOはUTF8のWebサイトを生成しますが、HTMLHelpで日本語を扱うためにはSJIS(Windows CP932)へ変換する必要があります。変換は<code>build.bat</code>の処理で行われますが、SJISに対応文字がなく変換できなかった文字については、<code>build.bat</code>と同じディレクトリの<code>unknonw_(edition).log</code>に記録されます。</p>
 <h4 id="置換できない文字の例">置換できない文字の例</h4>
-<p>SJISの対応文字に置換できない文字は&rdquo;?&ldquo;で置換されます。例えば以下の文字はHTML Helpでは&rdquo;?&ldquo;となります。</p>
+<p>SJISの対応文字に置換できない文字は&quot;?&ldquo;で置換されます。例えば以下の文字はHTML Helpでは&rdquo;?&ldquo;となります。</p>
 <p>30F7	ヷ<br>
 30F8	ヸ<br>
 30F9	ヹ<br>
@@ -57,7 +58,7 @@
 
     </div><div class="footer">
   <p class="copyright">
-    &copy; 2020 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
+    &copy; 2020 - 2021 mochimo.<a href="https://github.com/mochimochiki/mdhelp">GitHub</a>
   </p>
 </div>
 </body>

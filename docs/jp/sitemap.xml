@@ -1,40 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/GettingStarted.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/GettingStarted/GettingStarted.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/10_ConfigureHelp.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/HTMLHelp.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/content1/test.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./content1/test.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/content1/test.html"
+                />
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/20_shortcodes.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/30_Edition.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/Configuration/40_CI.html</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/_include/test.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./_include/test.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/_include/test.html"
+                />
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/categories.html</loc>
     <xhtml:link
                 rel="alternate"
@@ -46,9 +53,19 @@
                 hreflang="jp"
                 href="https://mochimochiki.github.io/mdhelp/jp/categories.html"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://mochimochiki.github.io/mdhelp/jp/content1.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="./content1.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="jp"
+                href="https://mochimochiki.github.io/mdhelp/jp/content1.html"
+                />
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/</loc>
     <xhtml:link
                 rel="alternate"
@@ -60,9 +77,7 @@
                 hreflang="jp"
                 href="https://mochimochiki.github.io/mdhelp/jp/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://mochimochiki.github.io/mdhelp/jp/tags.html</loc>
     <xhtml:link
                 rel="alternate"
@@ -75,5 +90,4 @@
                 href="https://mochimochiki.github.io/mdhelp/jp/tags.html"
                 />
   </url>
-  
 </urlset>
