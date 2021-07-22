@@ -19,6 +19,7 @@ uglyurls = true # 各ページのURLを/xxx.html形式(=uglyURL)にする
     isCHM = false
     # custom_css = ["/css/custom.css"]
     # custom_js = ["/js/custom.js"]
+    showIfs = ["editionA", "test"]
 
 [languages]
   [languages.jp]

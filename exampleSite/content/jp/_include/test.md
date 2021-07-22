@@ -1,7 +1,13 @@
-## include test
+### test.md
 
-この文書はincludeされています。
+test.mdが呼び出されました。
+
+| No  | content |
+| --- | --- |
+| 1   | testA    |
+| 2   | testB    |
+| 3   | testC    |
 
 {{% note %}}
-注記もincludeできます
+ショートコードもincludeできます。
 {{% /note %}}
