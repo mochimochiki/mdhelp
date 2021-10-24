@@ -8,4 +8,4 @@ This is content1 page.
 
 [Link to content2](../content2/test.html)
 
-{{< include test.md >}}
+{{< include includetest.md >}}

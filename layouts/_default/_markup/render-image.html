@@ -1,12 +1,18 @@
 {{- $url := .Destination | safeURL | urls.Parse }}
 {{- $querys := split $url.RawQuery "&"}}
-{{- if .PlainText }}
+{{- if .PlainText | findRE "[^\\s]" }}
+{{- /* 代替テキストがあるならキャプション表示 */}}
 <figure>
   <div>
   <img src="{{ $url.Path }}" alt="{{ .PlainText }}" {{ with .PlainText }} class="fig" {{ end }} {{ range $querys }}{{
     (printf "%s" .) | safeHTMLAttr }}{{ end }}>
   </div>
   {{ with .PlainText }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else if .PlainText }}
+{{- /* 代替テキストが空白のみなら中央寄せ */}}
+<figure>
+  <img src="{{ $url.Path }}" alt="{{ .PlainText }}" {{ range $querys }}{{ (printf "%s" .) | safeHTMLAttr }}{{ end }}>
 </figure>
 {{- else }}
 <img src="{{ $url.Path }}" alt="{{ .PlainText }}" {{ range $querys }}{{ (printf "%s" .) | safeHTMLAttr }}{{ end }}>

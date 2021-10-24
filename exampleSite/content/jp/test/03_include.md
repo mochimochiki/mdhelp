@@ -5,7 +5,7 @@ weight: 30
 
 ## include md
 
-{{< include test.md >}}
+{{< include includetest.md >}}
 
 ## include csv from current dir
 

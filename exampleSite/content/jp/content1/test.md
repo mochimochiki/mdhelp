@@ -6,4 +6,4 @@ weight: 20
 
 content1 ページです。
 
-{{< include test.md >}}
+{{< include includetest.md >}}

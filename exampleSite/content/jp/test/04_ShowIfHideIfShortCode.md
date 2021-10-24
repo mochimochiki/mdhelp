@@ -94,7 +94,7 @@ weight: 40
 
 * この下にmdのinclude
 
-{{< include test.md >}}
+{{< include includetest.md >}}
 
 ここまで。
 
