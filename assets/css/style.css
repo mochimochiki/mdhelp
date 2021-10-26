@@ -154,18 +154,30 @@ img {
   height: auto;
 }
 
-table{
-  border-collapse:collapse;
-  margin-top: 12pt;
-  margin-bottom: 12pt;
+
+table {
+  display: table;
+  min-width: 50%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 12pt auto;
 }
-td,th{
-  border: solid 1px #aaa;
+td, th {
   font-size: small;
   padding: 4pt;
+  text-align: left;
 }
-th{
-  background:#ccc;
+th {
+  background: #605f5f;
+  border: solid 2px #fff;
+  border-bottom: solid 4px #fff;
+  color: #fff;
+}
+tr {
+  background: #ebebeb;
+}
+td {
+  border: solid 2px #fff;
 }
 /* gray-table */
 table.gray th {
@@ -183,6 +195,7 @@ table.gray td {
 /* simple-table */
 table.simple th {
   background: inherit;
+  color: #000;
   border: solid 1px;
   border-bottom: double 3px;
 }
